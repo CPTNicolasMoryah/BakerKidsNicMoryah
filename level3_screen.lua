@@ -143,81 +143,81 @@ local function AskQuestion()
     local word = math.random(1,15)
 
     if (word == 1) then
-        questionObject.text = "CHEES_"
+        questionObject.text = "PE_PE_O_I"
         --questionObject.isVisible = true
 
-        correctAnswer = "E"
+        correctAnswer = "PRN"
 
     elseif (word == 2) then
-        questionObject.text = "BUTTE_"
+        questionObject.text = "OL_V_ OI_"
         --questionObject.isVisible = true
 
-        correctAnswer = "R"
+        correctAnswer = "IEL"
 
     elseif (word == 3) then
-        questionObject.text = "FLOU_"
+        questionObject.text = "G_EEN PEP_ER_"
 
-        correctAnswer = "R"
+        correctAnswer = "RPS"
 
     elseif (word == 4) then
-        questionObject.text = "PEPPERON_"
+        questionObject.text = "RE_ PE_P_RS"
 
         correctAnswer = "I"
 
     elseif (word == 5) then
-        questionObject.text = "TOMATO SAUC_"
+        questionObject.text = "_U_TE_"
 
-        correctAnswer = "E"
+        correctAnswer = "BTR"
 
     elseif (word == 6) then
-        questionObject.text = "SAUSAG_"
+        questionObject.text = "TO_AT_ SA_CE"
 
-        correctAnswer = "E"
+        correctAnswer = "MOU"
 
     elseif (word == 7) then
-        questionObject.text = " RED PEPPE_"
+        questionObject.text = "M_SH_OO_"
 
-        correctAnswer = "R"
+        correctAnswer = "URM"
 
     elseif (word == 8) then
-        questionObject.text = "TOM___"
+        questionObject.text = "SW_ET ON_O_S"
 
-        correctAnswer = "ATO"
+        correctAnswer = "EIN"
 
     elseif (word == 9) then
-        questionObject.text = "OLIV_"
+        questionObject.text = "G_ILLE_ ZUCCH_NI"
 
-        correctAnswer = "E"
+        correctAnswer = "RDI"
 
     elseif (word == 10) then
-        questionObject.text = "ONIO_"
+        questionObject.text = "JAL_PENO P_PPE_S"
 
-        correctAnswer = "N"
+        correctAnswer = "AER"
 
     elseif (word == 11) then
-        questionObject.text = "MUSHROO_"
+        questionObject.text = "RE_ O_ION_"
 
-        correctAnswer = "M"
+        correctAnswer = "DNS"
 
     elseif (word == 12) then
-        questionObject.text = "SA_T"
+        questionObject.text = "ROMA T_MAT_E_"
 
-        correctAnswer = "L"
+        correctAnswer = "OOS"
 
     elseif (word == 13) then
-        questionObject.text = "BACO_"
+        questionObject.text = "ROS_ED G_RL_C"
 
-        correctAnswer = "N"
+        correctAnswer = "TAI"
 
     elseif (word == 14) then
-        questionObject.text = "GREEN PEPP_R"
+        questionObject.text = "_RU_CHE_TA"
 
-        correctAnswer = "E"
+        correctAnswer = "BCT"
 
     elseif (word == 15) then
-        questionObject.text = "OLIVE OI_"
+        questionObject.text = "PI_E_PP_E"
 
-        correctAnswer = "L"
+        correctAnswer = "NAL"
 
     end
 
