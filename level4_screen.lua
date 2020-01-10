@@ -51,7 +51,7 @@ local Eggs2
 local Flour 
 local FlourTextField
 local Vanilla
-local VanillaTextField
+local VanillaTextField1
 local Salt
 local SaltTextField
 local Sugar
@@ -74,14 +74,19 @@ local VanillaTimer
 local SaltTimer
 local SugarTimer
 
-local ANSWERChocolateChips1 = "Nic Likes Men"
-local ANSWERChocolateChips2 = "r"
+local ANSWERChocolateChips1 = "o"
+local ANSWERChocolateChips2 = "a"
+local ANSWERChocolateChips3 = "i"
 local ANSWERBAKINGSODA1 = "g"
 local ANSWERBAKINGSODA2 = "a"
+local ANSWERBAKINGSODA3 = "o"
 local ANSWERBUTTER = "r"
-local ANSWEREGGS = "g"
+local ANSWERBUTTER2 = "t"
+local ANSWERButter3 = "u"
+local ANSWEREGGS = "gg"
 local ANSWERFLOUR = "r"
-local ANSWERVanilla = "k"
+local ANSWERVanilla = "a"
+local ANSWERVanilla1 = "la"
 local ANSWERSALT = "t"
 local ANSWERSUGAR = "r"
 
@@ -89,6 +94,7 @@ local CAPITALANSWERChocolateChips1 = "G"
 local CAPITOLANSWERChocolateChips2 = "R"
 local CAPITOLANSWERBAKINGSODA1 = "G" 
 local CAPITOLANSWERBAKINGSODA2 = "A"
+local CAPITOLANSWERBAKINGSODA3 = "K"
 local CAPITOLANSWERBUTTER = "R"
 local CAPITOLANSWEREGGS = "G"
 local CAPITOLANSWERFLOUR = "R"
@@ -144,7 +150,7 @@ local function HideNumTextfields()
     ButterTextField.isVisible = false
     Eggs1TextField.isVisible = false
     FlourTextField.isVisible = false
-    VanillaTextField.isVisible = false
+    VanillaTextField1.isVisible = false
     SaltTextField.isVisible = false
     SugarTextField.isVisible = false
 
@@ -187,9 +193,9 @@ local function ShowNumTextfields()
     end
 
     if (VanillaComplete == true) then
-        VanillaTextField.isVisible = false
+        VanillaTextField1.isVisible = false
     else
-        VanillaTextField.isVisible = true
+        VanillaTextField1.isVisible = true
     end
 
     if (SaltComplete == true) then
@@ -245,7 +251,7 @@ local function youLoseTransition(  )
     ButterTextField.isVisible = false
     Eggs1TextField.isVisible = false
     FlourTextField.isVisible = false
-    VanillaTextField.isVisible = false
+    VanillaTextField1.isVisible = false
     SaltTextField.isVisible = false
     SugarTextField.isVisible = false
     pauseButton.isVisible = false
@@ -356,12 +362,12 @@ local function Vanilla1( )
     Vanilla.x=Vanilla.x-4.5
     Vanilla.y = Vanilla.y + 2
     Vanilla:scale(1.005,1.005)
-    VanillaTextField.x = VanillaTextField.x - 4
-    VanillaTextField.y = VanillaTextField.y + 2
-    VanillaTextField:scale(1.005,1.005)
-    if(Vanilla.x <= display.contentCenterX)then
+    VanillaTextField1.x = VanillaTextField1.x - 4
+    VanillaTextField1.y = VanillaTextField1.y + 2
+    VanillaTextField1:scale(1.005,1.005)
+    if(Vanilla.x >= display.contentCenterX)then
         timer.cancel(VanillaTimer)
-        VanillaTextField:resizeFontToFitHeight()
+        VanillaTextField1:resizeFontToFitHeight()
     else
         VanillaTimer = timer.performWithDelay(-0.23, Vanilla1)
     end
@@ -769,6 +775,44 @@ local function ChocolateChips2Q( event )
     end
 end
 
+local function ChocolateChips3Q( event )
+        userAnswerChocolateChips2 = tostring(event.target.text)
+    if(event.phase=="submitted")then
+        if (userAnswerChocolateChips2 == ANSWERChocolateChips2) or (userAnswerChocolateChips2 == CAPITOLANSWERChocolateChips2) and (userAnswerChocolateChips1 == ANSWERChocolateChips1) or (userAnswerChocolateChips1 == CAPITALANSWERChocolateChips1)then
+            native.setKeyboardFocus( nil )
+            ChocolateChips1TextField:removeEventListener("userInput", ChocolateChips1Q)
+            ChocolateChips2TextField:removeEventListener("userInput", ChocolateChips2Q)
+            ChocolateChips3TextField:removeEventListener("userInput", ChocolateChips3Q)
+            correctObject.isVisible = true
+            if (soundOn == true) then
+                correctSoundChannel = audio.play(correctSound)
+            end
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            incorrectTextObject.isVisible = false
+            ChocolateChips1TextField.text = ""
+            ChocolateChips2TextField.text = ""
+            BakingSodaV = true
+            ChocolateChips1.isVisible = false
+            ChocolateChips1TextField.isVisible = false
+            ChocolateChips2.isVisible = false
+            ChocolateChips2TextField.isVisible = false
+            PlaceChocolateChips()
+            ChocolateChipsImage:addEventListener("touch", DissapearChocolateChips)
+        else
+            checkAnswers()
+            native.setKeyboardFocus( nil )
+            incorrectTextObject.isVisible = true
+            if (soundOn == true) then
+                incorrectSoundChannel = audio.play(incorrectSound)
+            end
+            incorrectTextObject.text = ("That is incorrect.You Lose a life")
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            correctObject.isVisible = false
+            BakingSodaV = true
+        end
+    end
+end
+
 local function PlaceBakingSoda()
     BakingSodaComplete = true
     BakingSodaImage.x = math.random(100, display.contentWidth)
@@ -1037,19 +1081,19 @@ local function VanillaQ( event )
     if (event.phase=="began")then
 
         --clear text field 
-       VanillaTextField.text=""
+       VanillaTextField1.text=""
     elseif(event.phase=="submitted")then
         userAnswerVanilla = tostring(event.target.text)
         if (userAnswerVanilla == ANSWERVanilla)then
             native.setKeyboardFocus( nil )
-            VanillaTextField:removeEventListener("userInput", VanillaQ)
+            VanillaTextField1:removeEventListener("userInput", VanillaQ)
             correctObject.isVisible = true
             if (soundOn == true ) then 
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
             incorrectTextObject.isVisible = false
-            VanillaTextField.isVisible = false
+            VanillaTextField1.isVisible = false
             Vanilla.isVisible = false
             SaltV = true
             VanillaV = false
@@ -1066,7 +1110,7 @@ local function VanillaQ( event )
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
             correctObject.isVisible = false
-            VanillaTextField.text = ""
+            VanillaTextField1.text = ""
             VanillaV = false
             SaltV = true
         end
@@ -1200,12 +1244,13 @@ local function AddEventListeners()
     pauseButton:addEventListener("touch", pause)
     ChocolateChips1TextField:addEventListener("userInput", ChocolateChips1Q)
     ChocolateChips2TextField:addEventListener("userInput", ChocolateChips2Q)
+    ChocolateChips3TextField:addEventListener("userInput", ChocolateChips3Q)
     BakingSoda1TextField:addEventListener("userInput", BakingSoda1Q)
     BakingSoda2TextField:addEventListener("userInput", BakingSoda2Q)
     ButterTextField:addEventListener("userInput", ButterQ)
     Eggs1TextField:addEventListener("userInput", EggsQ)
     FlourTextField:addEventListener("userInput", FlourQ)
-    VanillaTextField:addEventListener("userInput", VanillaQ)
+    VanillaTextField1:addEventListener("userInput", VanillaQ)
     SaltTextField:addEventListener("userInput", SaltQ)
     SugarTextField:addEventListener("userInput", SugarQ)
 end
@@ -1254,40 +1299,44 @@ local function create(  )
     BakingSoda2 = display.newText("sod", 510 , 110, Arial, 35)
     BakingSoda2:setTextColor(0,0,0)  
 
-    BakingSoda2TextField = native.newTextField(500 , 110 , 30 , 35)
+    BakingSoda2TextField = native.newTextField(555 , 110 , 30 , 35)
     BakingSoda2TextField:setTextColor(0,0.3,0)
     BakingSoda2TextField.inputType = "no-emoji" 
 
-    Butter = display.newText("Butte", 580, 110, Arial , 35)
+    Butter = display.newText("Butte", 650, 110, Arial , 35)
     Butter:setTextColor(0,0,0)  
 
-    ButterTextField = native.newTextField(635 , 110, 30 , 35)
+    ButterTextField = native.newTextField(710 , 110, 30 , 35)
     ButterTextField:setTextColor(0,0.3,0)
     ButterTextField.inputType = "no-emoji" 
 
-    Eggs1 = display.newText("Eg", 680, 110, Arial, 35)
+    Eggs1 = display.newText("E", 750, 110, Arial, 35)
     Eggs1:setTextColor(0,0,0)  
 
-    Eggs1TextField = native.newTextField(720, 110, 30, 35)
+    Eggs1TextField = native.newTextField(780, 110, 30, 35)
     Eggs1TextField:setTextColor(0,0.3,0)
     Eggs1TextField.inputType = "no-emoji" 
 
-    Eggs2 = display.newText("s", 750, 110, Arial ,35)
+    Eggs2 = display.newText("s", 810, 110, Arial ,35)
     Eggs2:setTextColor(0,0,0) 
 
-    Flour = display.newText("Flou", 800, 110, Arial, 35)
+    Flour = display.newText("Flou", 860, 110, Arial, 35)
     Flour:setTextColor(0,0,0) 
 
-    FlourTextField = native.newTextField(850, 110, 30, 35)
+    FlourTextField = native.newTextField(910, 110, 30, 35)
     FlourTextField:setTextColor(0,0.3,0)
     FlourTextField.inputType = "no-emoji"
 
-    Vanilla = display.newText("Mil",900, 110, Arial, 35)
+    Vanilla = display.newText("V    nil ",300, 150, Arial, 35)
     Vanilla:setTextColor(0,0,0)
 
-    VanillaTextField = native.newTextField(940, 110, 30, 35)
-    VanillaTextField:setTextColor(0,0.3,0)
-    VanillaTextField.inputType = "no-emoji"
+    VanillaTextField1 = native.newTextField(360, 150, 30, 35)
+    VanillaTextField1:setTextColor(0,0.3,0)
+    VanillaTextField1.inputType = "no-emoji"
+
+    VanillaTextField2 = native.newTextField(290, 150, 30, 35)
+    VanillaTextField2:setTextColor(0,0.3,0)
+    VanillaTextField2.inputType = "no-emoji"
 
     Salt = display.newText("Sal", 30, 150, Arial, 35)
     Salt:setTextColor(0,0,0)
@@ -1327,7 +1376,7 @@ local function create(  )
     heart3.y=display.contentHeight*1/17
     heart3:scale(0.5,0.5)
 
-    clockText=display.newText("60", display.contentWidth/3, display.contentHeight/5, nil, 50)
+    clockText=display.newText("60", display.contentWidth/5, display.contentHeight/2, nil, 50)
     clockText:setTextColor(255/255, 2/255, 198/255)
     clockText.isVisible=true
 
@@ -1371,7 +1420,7 @@ local function create(  )
     VanillaImage.y = math.random(160, display.contentHeight*330/512)
     VanillaImage.isVisible = false
 
-    SaltImage = display.newImageRect("Images/Salt.png", 200, 200)
+    SaltImage = display.newImageRect("Images/salt.png", 200, 200)
     SaltImage.x = math.random(50, display.contentWidth)
     SaltImage.y = math.random(250, display.contentHeight*330/512)
     SaltImage.isVisible = false
@@ -1414,6 +1463,8 @@ function scene:create( event )
     sceneGroup:insert( ChocolateChips1TextField ) 
     sceneGroup:insert( ChocolateChips2 )
     sceneGroup:insert( ChocolateChips2TextField ) 
+    sceneGroup:insert( ChocolateChips3 )
+    sceneGroup:insert( ChocolateChips3TextField ) 
     sceneGroup:insert( BakingSoda1 ) 
     sceneGroup:insert( BakingSoda1TextField )
     sceneGroup:insert( BakingSoda1TextField )  
@@ -1427,7 +1478,7 @@ function scene:create( event )
     sceneGroup:insert( Flour ) 
     sceneGroup:insert( FlourTextField )
     sceneGroup:insert( Vanilla )
-    sceneGroup:insert( VanillaTextField )  
+    sceneGroup:insert( VanillaTextField1 )  
     sceneGroup:insert( Salt )
     sceneGroup:insert( SaltTextField )
     sceneGroup:insert( Sugar )
