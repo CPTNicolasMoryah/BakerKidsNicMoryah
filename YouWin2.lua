@@ -46,7 +46,7 @@ local function mainmenuTransition()
 end
 local function level3screentransition( )
     composer.removeScene("level2_screen")
-    composer.gotoScene( "level3_screen", {effect = "slideLeft", time = 1000})
+    composer.gotoScene( "level_select2", {effect = "slideLeft", time = 1000})
 end
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
