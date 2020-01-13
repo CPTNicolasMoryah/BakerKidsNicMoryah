@@ -15,11 +15,9 @@ local composer = require( "composer" )
 -----------------------------------------------------------------------------------------
 
 -- Go to the intro screen
-<<<<<<< HEAD
-composer.gotoScene( "level3_screen" )
-=======
---composer.gotoScene( "level4_screen" )
->>>>>>> db0923e5b3ecc219f79f0e722ab72768336d292d
+
+--composer.gotoScene( "level3_screen" )
+
 --composer.gotoScene( "level2_screen" )
 composer.gotoScene( "splashscreen" )
 --composer.gotoScene( "YouLose" )
