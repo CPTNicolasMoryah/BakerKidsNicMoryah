@@ -1084,7 +1084,7 @@ local function VanillaQ1( event )
        VanillaTextField2.text=""
     elseif(event.phase=="submitted")then
         userAnswerVanilla = tostring(event.target.text)
-        if (userAnswerVanilla == ANSWERVanilla) and (userAnswerVanilla1 == )then
+        if (userAnswerVanilla == ANSWERVanilla) and (userAnswerVanilla1 == ANSWERVanilla1 )then
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
             correctObject.isVisible = true
