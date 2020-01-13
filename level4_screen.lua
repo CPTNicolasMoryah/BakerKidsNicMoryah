@@ -1076,6 +1076,47 @@ local function PlaceVanilla()
     VanillaImage.isVisible = true
 end
 
+local function VanillaQ1( event )
+    -- ask the question
+    if (event.phase=="began")then
+
+        --clear text field 
+       VanillaTextField2.text=""
+    elseif(event.phase=="submitted")then
+        userAnswerVanilla = tostring(event.target.text)
+        if (userAnswerVanilla == ANSWERVanilla) and (userAnswerVanilla1 == )then
+            native.setKeyboardFocus( nil )
+            VanillaTextField1:removeEventListener("userInput", VanillaQ)
+            correctObject.isVisible = true
+            if (soundOn == true ) then 
+                correctSoundChannel = audio.play(correctSound)
+            end
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            incorrectTextObject.isVisible = false
+            VanillaTextField1.isVisible = false
+            Vanilla.isVisible = false
+            SaltV = true
+            VanillaV = false
+            PlaceVanilla()
+            VanillaImage:addEventListener("touch", DissapearVanilla)
+            
+        else
+            native.setKeyboardFocus( nil )
+            checkAnswers()
+            incorrectTextObject.isVisible = true
+            if (soundOn == true) then
+                incorrectSoundChannel = audio.play(incorrectSound)
+            end
+            incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            correctObject.isVisible = false
+            VanillaTextField1.text = ""
+            VanillaV = false
+            SaltV = true
+        end
+    end
+end
+
 local function VanillaQ( event )
     -- ask the question
     if (event.phase=="began")then

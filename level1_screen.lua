@@ -41,6 +41,8 @@ local questionObject
 
 local textField
 
+local chefimage
+
 local userAnswer
 local correctAnswer
 
@@ -56,6 +58,7 @@ local incorrectSoundChannel
 local loseSound = audio.loadSound("Sounds/lose.mp3")
 local loseSoundChannel
 
+local cashoverlay
 -----------------------------------------------------------------------------------------
 -- GLOBAL VARIABLES
 -----------------------------------------------------------------------------------------
@@ -366,6 +369,27 @@ function scene:create( event )
     textField = native.newTextField( display.contentWidth/2, 280, 150, 80)
     textField.inputType = "default"
 
+    chefimage = display.newImageRect("Images/chef.png", 200, 200)
+    chefimage.height = 350
+    chefimage.width = 100
+    chefimage.x = 50
+    chefimage.y = 550
+    if (chef1 == true) then
+        chefimage.isVisible = true
+    else
+        chefimage.isVisible = false
+    end
+
+    Cashier = display.newImageRect( "Images/Cashier" )
+
+    cashoverlay = display.newImageRect( "Images/Level1ScreenMoryah1.png",0,0)
+    cashoverlay.anchorX = 0
+    cashoverlay.anchorY = 1536
+    cashoverlay.x = 1
+    cashoverlay.y = 840
+    cashoverlay.height = 398
+    cashoverlay.width = 320
+    sceneGroup:toFront( cashoverlay )
     -- Creating Back Button
     backButton = widget.newButton( 
     {
@@ -399,6 +423,7 @@ function scene:create( event )
     sceneGroup:insert( correctObject )
     sceneGroup:insert( incorrectObject )
     sceneGroup:insert( questionObject )
+    sceneGroup:insert( chefimage )
 
 
 end --function scene:create( event )
@@ -434,6 +459,7 @@ function scene:show( event )
         StartTimer()
         Visible()
         AskQuestion()
+
 
     end
 
