@@ -413,6 +413,11 @@ function scene:create( event )
     Cashier.width = 100
     Cashier.x = 50
     Cashier.y = 550
+    if (Cashier1 == true) then
+        Cashier.isVisible = true
+    else
+        Cashier.isVisible = false
+    end
 
     cashoverlay = display.newImageRect( "Images/Level1ScreenMoryah1.png",0,0)
     cashoverlay.anchorX = 0
