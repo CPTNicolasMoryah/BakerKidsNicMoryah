@@ -61,7 +61,6 @@ local incorrectSoundChannel
 
 local loseSound = audio.loadSound("Sounds/lose.mp3")
 local loseSoundChannel
-local cashoverlay
 -----------------------------------------------------------------------------------------
 -- GLOBAL VARIABLES
 -----------------------------------------------------------------------------------------
