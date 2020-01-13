@@ -44,7 +44,7 @@ local textField
 local userAnswer
 local correctAnswer
 
-local level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
+local level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
 
 local level2SoundChannel 
 

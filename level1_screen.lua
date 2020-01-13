@@ -46,9 +46,9 @@ local chefimage
 local userAnswer
 local correctAnswer
 
-level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
+level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
 
-level2SoundChannel = audio.play(level1Sound,{loops = -1})
+level2SoundChannel = audio.play(level2Sound,{loops = -1})
 
 local correctSound = audio.loadSound("Sounds/correct.mp3")
 local correctSoundChannel

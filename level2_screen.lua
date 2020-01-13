@@ -127,7 +127,7 @@ local totalIngredients = 0
 -----------------------------------------------------------------------------------------
 -- SOUNDS
 -----------------------------------------------------------------------------------------
-local level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
+local level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
 local level2SoundChannel = audio.play(level2Sound,{loops = -1})
 
 local correctSound = audio.loadSound("Sounds/correctsound.wav")
