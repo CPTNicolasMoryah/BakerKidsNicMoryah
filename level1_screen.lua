@@ -198,9 +198,9 @@ local function AskQuestion()
         correctAnswer = "A"
 
     elseif (word == 6) then
-        questionObject.text = "MARSHMALL_"
+        questionObject.text = "MARSHMALLO_"
 
-        correctAnswer = "O"
+        correctAnswer = "W"
 
     elseif (word == 7) then
         questionObject.text = "CHOCOLAT_"

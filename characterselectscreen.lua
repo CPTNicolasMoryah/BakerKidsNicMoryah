@@ -112,8 +112,8 @@ function scene:create( event )
         -- height = 106,
 
         -- Setting Visual Properties
-        defaultFile = "Images/BackButtonUnPressedMoryah.png",
-        overFile = "Images/BackButtonPressedMoryah.png",
+        defaultFile = "Images/BackButtonPressedMoryah.png",
+        overFile = "Images/BackButtonUnpressedMoryah.png",
 
         -- Setting Functional Properties
         onRelease = BackTransition
@@ -121,11 +121,11 @@ function scene:create( event )
     } )
 
     -----------------------------------------------------------------------------------------
-
-    -- Associating Buttons with this scene
-    sceneGroup:insert( backButton )
      --set the size of the button
     backButton:scale(0.7,0.7)
+    -- Associating Buttons with this scene
+    sceneGroup:insert( backButton )
+    
 end --function scene:create( event )
 
 -----------------------------------------------------------------------------------------
