@@ -127,10 +127,12 @@ local totalIngredients = 0
 -----------------------------------------------------------------------------------------
 -- SOUNDS
 -----------------------------------------------------------------------------------------
-level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
-level2SoundChannel = audio.play(level2Sound,{loops = -1})
+local level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
+local level2SoundChannel = audio.play(level2Sound,{loops = -1})
+
 local correctSound = audio.loadSound("Sounds/correctsound.wav")
 local correctSoundChannel
+
 local incorrectSound = audio.loadSound("Sounds/incorrectsound.wav")
 local incorrectSoundChannel
 -----------------------------------------------------------------------------------------
@@ -1364,7 +1366,7 @@ local function create(  )
     MilkImage.y = math.random(160, display.contentHeight*330/512)
     MilkImage.isVisible = false
 
-    SaltImage = display.newImageRect("Images/Salt.png", 200, 200)
+    SaltImage = display.newImageRect("Images/salt.png", 200, 200)
     SaltImage.x = math.random(50, display.contentWidth)
     SaltImage.y = math.random(250, display.contentHeight*330/512)
     SaltImage.isVisible = false

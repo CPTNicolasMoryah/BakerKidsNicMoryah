@@ -71,7 +71,7 @@ end
 local function Unmute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(bkgMusicChannel)
+        audio.resume(bkgMusicChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = false
         -- hide the mute button
@@ -219,7 +219,7 @@ function scene:create( event )
     unmuteButton = display.newImageRect("Images/unmuteButton.png", 90, 90)
     unmuteButton.x = 900
     unmuteButton.y = 148
-    unmuteButton.isVisible = false
+    unmuteButton.isVisible =false
     -----------------------------------------------------------------------------------------
     muteButton = display.newImageRect("Images/muteButton.png", 90, 90)
     muteButton.x = 900
@@ -309,6 +309,7 @@ function scene:hide( event )
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
         muteButton:removeEventListener("touch", Mute)
+        unmuteButton:removeEventListener("touch", Unmute)
     end
 
 end -- function scene:hide( event )

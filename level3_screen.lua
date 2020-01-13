@@ -235,7 +235,7 @@ local function AskQuestion()
         correctAnswer = "OO"
 
     elseif (word == 13) then
-        questionObject.text = "ROS_ED G_RL_C"
+        questionObject.text = "ROAS_ED G_RL_C"
 
         correctAnswer = "TAI"
 
