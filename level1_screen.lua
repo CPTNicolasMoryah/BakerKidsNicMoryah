@@ -426,7 +426,6 @@ function scene:create( event )
     cashoverlay.y = 840
     cashoverlay.height = 398
     cashoverlay.width = 320
-    sceneGroup:toFront( cashoverlay )
     -- Creating Back Button
     backButton = widget.newButton( 
     {
@@ -461,7 +460,7 @@ function scene:create( event )
     sceneGroup:insert( incorrectObject )
     sceneGroup:insert( questionObject )
     sceneGroup:insert( chefimage )
-
+    sceneGroup:insert( cashoverlay )
 
 end --function scene:create( event )
 
