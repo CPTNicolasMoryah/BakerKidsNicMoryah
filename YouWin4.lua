@@ -35,10 +35,10 @@ local mainmenu
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
-local function Level4ScreenTransition( )
-    composer.removeScene("level4_screen")
-    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
-end 
+--local function Level4ScreenTransition( )
+--    composer.removeScene("level4_screen")
+--    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
+--end 
 local function mainmenuTransition()
     composer.removeScene("level4_screen")
    composer.gotoScene( "main_menu" )

@@ -44,10 +44,10 @@ local function mainmenuTransition()
     composer.removeScene("level3_screen")
    composer.gotoScene( "main_menu" )
 end
-local function level4screentransition( )
-    composer.removeScene("level3_screen")
-    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
-end
+--local function level4screentransition( )
+--    composer.removeScene("level3_screen")
+--    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
+--end
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -100,23 +100,23 @@ function scene:create( event )
             -- When the button is released, call the Level1 screen transition function
             onRelease = mainmenuTransition          
         } )
-    nextlevel = widget.newButton( 
-        {   
-            -- Set its position on the screen relative to the screen size
-            x = display.contentWidth*6/8,
-            y = display.contentHeight*7/8,
-            
-
-            -- Insert the images here
-            defaultFile = "Images/next levelWon.png",
-            overFile = "Images/next levelLost.png",
-
-            -- When the button is released, call the Level1 screen transition function
-            onRelease = level4screentransition          
-        } )
+   -- nextlevel = widget.newButton( 
+   --     {   
+   --         -- Set its position on the screen relative to the screen size
+   --         x = display.contentWidth*6/8,
+   --         y = display.contentHeight*7/8,
+   --         
+--
+   --         -- Insert the images here
+   --         defaultFile = "Images/next levelWon.png",
+   --         overFile = "Images/next levelLost.png",
+--
+   --         -- When the button is released, call the Level1 screen transition function
+   --         onRelease = level4screentransition          
+   --     } )
     sceneGroup:insert( level2button )
     sceneGroup:insert( mainmenu ) 
-    sceneGroup:insert( nextlevel )
+    --sceneGroup:insert( nextlevel )
 end
 
 -----------------------------------------------------------------------------------------
