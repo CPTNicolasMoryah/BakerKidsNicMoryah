@@ -24,6 +24,9 @@ sceneName = "YouWin1"
 -- Creating Scene Object
 local scene = composer.newScene( sceneName )
 
+local wonSound = audio.loadSound("Sounds/win.mp3")
+local wonSoundChannel
+
 -----------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 -----------------------------------------------------------------------------------------
@@ -143,6 +146,7 @@ function scene:show( event )
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
+        wonSoundChannel = audio.play(wonSound)
     end
 
 end
@@ -170,6 +174,7 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
+        audio.stop(wonSoundChannel)
     end
 
 end

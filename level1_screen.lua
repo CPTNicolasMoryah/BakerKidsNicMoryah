@@ -46,15 +46,12 @@ local chefimage
 local userAnswer
 local correctAnswer
 
-level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
+local level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
 
-level2SoundChannel = audio.play(level2Sound,{loops = -1})
+local level2SoundChannel 
 
 local correctSound = audio.loadSound("Sounds/correct.mp3")
 local correctSoundChannel
-
-local wonSound = audio.loadSound("Sounds/win.mp3")
-local wonSoundChannel
 
 local incorrectSound = audio.loadSound("Sounds/incorrect.mp3")
 local incorrectSoundChannel
@@ -286,7 +283,7 @@ local function textFieldListener( event )
 
             -- you win! after 5 points       
             if (points == 5) then
-                wonSoundChannel = audio.play(wonSound)
+                
                 YouWin1()
 
             else
@@ -295,7 +292,7 @@ local function textFieldListener( event )
         else -- if user ans is wrong
 
             -- play sound for the wrong answer
-            incorrectSoundChannel = audio.play(incorrectSound)
+            incorrectSoundChannel = audio.play(incorrectSound, {channel=5})
 
             -- show incorrect
             incorrectObject.isVisible = true
@@ -519,6 +516,7 @@ function scene:hide( event )
     -------------------------------------------------------------------------------------
         textField:removeEventListener( "userInput", textFieldListener)
         textField.isVisible = false
+        audio.stop(level2SoundChannel)
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
