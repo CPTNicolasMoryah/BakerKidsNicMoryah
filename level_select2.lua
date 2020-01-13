@@ -91,9 +91,9 @@ end
 -----------------------------------------------------------------------------------------
 
 -- Creating Transition to Level1 Screen
-local function Level4ScreenTransition( )
-    composer.gotoScene( "level4_screen", {effect = "crossFade", time = 500})
-end   
+--local function Level4ScreenTransition( )
+ --   composer.gotoScene( "level4_screen", {effect = "crossFade", time = 500})
+--end   
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -164,24 +164,24 @@ function scene:create( event )
 
     -----------------------------------------------------------------------------------------
 
-    -- Creating level1 Button
-    level4Button = widget.newButton( 
-        {   
-            -- Set its position on the screen relative to the screen size
-            x = 682.66,
-            y = 512,
-
-            -- Setting Dimensions
-            width = 150,
-            height = 70,
-
-            -- Insert the images here
-            defaultFile = "Images/4Unpressed.png", 170, 120,
-            overFile = "Images/4Pressed.png", 170, 120,
-
-            -- When the button is released, call the Level1 screen transition function
-            onRelease = Level4ScreenTransition          
-        } )
+   -- -- Creating level1 Button
+   -- level4Button = widget.newButton( 
+   --     {   
+   --         -- Set its position on the screen relative to the screen size
+   --         x = 682.66,
+   --         y = 512,
+--
+   --         -- Setting Dimensions
+   --         width = 150,
+   --         height = 70,
+--
+   --         -- Insert the images here
+   --         defaultFile = "Images/4Unpressed.png", 170, 120,
+   --         overFile = "Images/4Pressed.png", 170, 120,
+--
+   --         -- When the button is released, call the Level1 screen transition function
+   --         onRelease = Level4ScreenTransition          
+   --     } )
 
     unmuteButton = display.newImageRect("Images/unmuteButton.png", 90, 90)
     unmuteButton.x = 900
@@ -197,7 +197,7 @@ function scene:create( event )
 
     -- Associating button widgets with this scene
     sceneGroup:insert( level3Button )
-    sceneGroup:insert( level4Button )
+    --sceneGroup:insert( level4Button )
     sceneGroup:insert( unmuteButton )
     sceneGroup:insert( muteButton )
 
