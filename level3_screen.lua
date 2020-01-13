@@ -46,7 +46,7 @@ local correctAnswer
 
 local level3Sound = audio.loadSound("Sounds/Level3screenmusic.mp3")
 
-local level3SoundChannel = audio.play(level3Sound,{loops = -1})
+local level3SoundChannel 
 
 local correctSound = audio.loadSound("Sounds/correctsound.wav")
 local correctSoundChannel
@@ -455,7 +455,7 @@ function scene:show( event )
         -- FUNTION CALLS
         ---------------------------------------------------------------------------------
         --call the functions
-
+        level3SoundChannel = audio.play(level3Sound,{loops = -1})
         textField.isVisible = true
         textField:addEventListener( "userInput", textFieldListener)
         points = 0

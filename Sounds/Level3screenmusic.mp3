@@ -1,600 +1,499 @@
 
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html dir="ltr" lang="en"> <!--<![endif]-->
 
+<head>
+    <base href="https://www.bensound.com/" />
+	<base href="http://www.bensound.com/" />
+	<meta charset="utf-8">
+	<title>Energy | Corporate Motivational Royalty Free Music</title>		<meta name="description" content="Download Creative Commons Music / Royalty Free Music for free and use it in your project: Videos(youtube,...), Websites, films,..." />
+		<meta name="keywords" content="royalty free music, free royalty free music, creative commons music,  creative commons, cc, royalty free, music, download, youtube" />
+				<meta name="keywords" content="royalty free music, royalty, free, music, energetic, upbeat, corporate, motivation, success, confidence, presentation, business, rock, electric, guitar, motivational, youtube, video, commercial, advertising, professional, serious" />
+		<meta name="viewport" content="width=1020px"/>
+		<link href="/image/data/icob2.png" rel="icon" />
+		<link rel="stylesheet" href="mep/bensound/mep/build/mediaelementplayer_cus.min.css" />
+	
 
+		
+	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
+		
+	<link rel="stylesheet" href="css/bendesign.css?70" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="mep/bensound/mep/build/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	
+	<script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
 
+	
+	
+	
+	<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js"></script>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	
+	
+	
+	<script type="text/javascript" src="leverod/view/javascript/leverod.js"></script>
 
-    <head>
-        
+	
+	
+	
+	<script type="text/javascript" src="https://www.bensound.com/catalog/view/adsmart_search/js/adsmartsearch_js.php?description_relevance=&sort_order=relevance-DESC&dropdown_enabled=0&dropdown_text_color=454545&dropdown_update_on_entire_word=0&dropdown_display_img=1&dropdown_display_price=1&dropdown_show_all=Show+all+results&dropdown_no_results=No+results&dropdown_width=340&tpl=bendesign&is_admin=0&website_url=https%3A%2F%2Fwww.bensound.com%2F&version=1.5.5.1&debug=0&debug_show_sql=0&speed_test=0"></script>
 
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Freesound: collaborative database of creative-commons licensed sound for musicians and sound lovers. Have you freed your sound today?" />
-        <meta name="keywords" content="free, sound" />
-        <link rel="stylesheet" type="text/css" href="/media/css/all.css?v=1301" />
-        <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/media/css/ie6.css?v=1301" /><![endif]-->
-        <link rel="icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#00aba9">
-	<meta name="theme-color" content="#ffffff">
-        <title>Freesound - &quot;Game background Music loop short&quot; by yummie</title>
-        <script src="/media/js/jquery-1.5.2.min.js" type="text/javascript"></script>
-        <script src="/media/js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>
-        <script src="/media/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="/media/js/swfobject.js" type="text/javascript"></script>
-        <script src="/media/js/jquery.watermarkinput.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            var isLoggedIn = false;
-            var loginUrl = "/home/login/?next=/people/yummie/sounds/410574/";
-            $(document).ready(function() {
-                 $("#search input[name=q]").Watermark("search sounds");
-            });
-            function clearWatermark(){
-			   $.Watermark.HideAll()
-			   return true
-			}
-        </script>
-        <script src="/media/js/freesound.js?v=1301" type="text/javascript"></script>
-    	<script src="/media/js/ajax_utils.js" type="text/javascript"></script>
-        <!-- next couple of lines are used for the HTML player -->
-        <link href='//fonts.googleapis.com/css?family=Inconsolata&v1' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" type="text/css" href="/media/html_player/player.css" />
-        <script src="/media/html_player/soundmanager2.js"></script>
-        <script type="text/javascript" src="/media/html_player/player.js"></script>
-        <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-86270-1']);
+	
+		<script type="text/javascript">
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35907795-1']);
   _gaq.push(['_trackPageview']);
-
-  (function() {
+(function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 
+</head>
+<body>
+
+				
+									
+					
+<div id="superglobal">	<!--start header-->
+	<header>
+		
+		<div id="boite-header">
+				<div id="pocart">
+		<div id="cart">
+	<a class="cart_dropdown" href="index.php?route=checkout/cart"><img src="image/cart_icon_w.png" alt=""><span id="cart-total">0 item(s) - 0,00€</span></a>
+</div>
+		</div>
+			
+						<script> 
+							$('#cart').hide();
+						</script>
+							
+						<script> 							
+						(function() {
+				    var origaddToCart = addToCart ;
+					    addToCart = function() 
+					    {
+					        var result = origaddToCart.apply(this, arguments);
+					        $('#cart').show();
+					        return result;
+					    };
+						})();
+						
+						$('#cart').live('mouseleave', function() {
+						//alert('cart mouseleave');
+						if($('#cart .content .empty').length)
+							{
+								$('#cart').hide();
+							}
+						}); 
+						</script>
+					
+		
+		<div id="logbox">
+			<ul>
+				<li><a href="https://www.bensound.com/index.php?route=account/account">Create An Account | Sign In</a></li>
+			</ul>
+		</div>
+					<div id="logo-texte"><a href="/"><img title="Bensound" alt="Bensound" src="image/logo-hd2.png" /></a>
+			</div>
+			<div id="nav">
+				<ul>
+					<li class="focus-couleur"><a href="royalty-free-music">ROYALTY FREE MUSIC</a></li>
+					<li ><a href="/licensing">LICENSing</a></li>
+					<li ><a href="/music-subscription-youtube-videos">Subscription</a></li>
+					<li ><a href="/help">Faq / Help</a></li>
+					<li ><a href="/contact-me">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>			
+		
+				
+				
+	</header>
         
-    <script type="text/javascript">
-        swfobject.registerObject("player_410574", "10");
-    </script>
-    <meta property="og:title" content="Game background Music loop short by yummie" />
-    <meta property="og:type" content="song" />
-    <meta property="og:audio" content="https://freesound.org/data/previews/410/410574_625529-lq.mp3" />
-    <meta property="og:audio:artist" content="yummie" />
-    <meta property="og:audio:title" content="Game background Music loop short" />
-    <meta property="og:url" content="https://freesound.org/people/yummie/sounds/410574/" />
-    <meta property="og:audio:type" content="application/mp3" />
-<!--     <meta property="og:image" content="http://freesound.org/data/displays/410/410574_625529_wave_M.png" /> -->
-    <meta property="og:site_name" content="Freesound" />
-    <meta property="fb:admins" content="100002130282170" />
+	<div id="bloc_body">
+		<div id="contenu">
+			<div class="container">
+			<div class="sixteen columns">
+				<div id="notification"></div>
+			</div>
+		</div><!--end container--><div class="container">
+	<div class="sixteen columns">
+		<div id="pageName">
+		</div>
+	</div>
+</div>
 
-    <meta name="twitter:card" content="player" />
-    <meta name="twitter:site" content="@freesound_dev" />
-    <meta name="twitter:title" content="Game background Music loop short" />
-    <meta name="twitter:description" content="This Audio track was created with Apple Garageband back in 2013.
+<!-- strat the main content area -->
+<div class="container">
+	
+    
 
-It was part of a game I made for my bachelors thesis.
-
-This was the loop music loop while playing the game." />
-    <meta name="twitter:image" content="https://freesound.org/data/displays/410/410574_625529_wave_L.png" />
-    <meta name="twitter:player" content="https://freesound.org/embed/sound/iframe/410574/simple/full_size/" />
-    <meta name="twitter:player:width" content="440" />
-    <meta name="twitter:player:height" content="132" />
-    <meta name="twitter:player:stream" content="https://freesound.org/data/previews/410/410574_625529-lq.mp3" />
-    <meta name="twitter:player:stream:content_type" content="audio/mp4" />
-
-    </head>
-
-    <body id="" onload="" onunload="">
-
-        
-
-        <div id="header">
-            <div id="account_nav">
+<div id="menu">	
+		        
+                  
                 
-                    <a href="/home/register/">Register</a>
-                    <a href="/home/login/?next=/people/yummie/sounds/410574/">Log In</a>
-                
-            <a href="/home/upload/" id="upload_button"></a>
-        </div>
-
-        <a href="/" id="logo"></a>
-
-        <div id="search">
-        <form method="get" onsubmit="return clearWatermark()" action="/search/">
-            <fieldset>
-               <input type="text" name="q" value="" size="30" />
-               <input type="submit" value="" id="search_submit" />
-            </fieldset>
-        </form>
-        </div>
-
-        <ul id="site_nav">
-            
-            <li class="active_tab"><a href="/browse/" id="site_nav_sounds"><span class="site_nav_icon"></span>Sounds</a></li>
-            <li class=""><a href="/forum/" id="site_nav_forums"><span class="site_nav_icon"></span>Forums</a></li>
-            <li class=""><a href="/people/" id="site_nav_people"><span class="site_nav_icon"></span>People</a></li>
-            <li class=""><a href="/help/faq/" id="site_nav_help"><span class="site_nav_icon"></span>Help</a></li>
-
-        </ul>
-    </div>
-
-        <div id="wrapper">
-        <div id="container">
-
-        
-
-        
-<div id="content_full"> <!-- START of Content area -->
-
-
+          		            <ul>
+			
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music">All</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/acoustic-folk">Acoustic / Folk</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/cinematic">Cinematic</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/corporate-pop">Corporate / Pop</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/electronica">Electronica</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/funky-groove">Urban / Groove</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/jazz">Jazz</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/rock">Rock</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/world-others">World / Others</a>
+                          </li>
+                      </ul>
+                  
+        </div>	
   
-<div id="single_sample_header" class="">
-    <a href="/people/yummie/packs/23103/">Garageband Game Music</a>  &#187; <a href="#">Game background Music loop short</a>
-</div>
+	<div id="pr_style_two" class="sixteen columns">
+				<div class="focus_music">	
+					
+			<div id="titre_focus">
+				<h2><a href="/royalty-free-music/track/energy">Energy<span> | Royalty Free Music</span></a></h2>
+			</div>
+			<div id="img_focus">
+				<img src="bensound-img/energy.jpg" title="Energy" alt="Energy" />
+			</div>
+			<div id="info_focus">
+						<div class="product_info_acc">
+				
+				
+					<div class="product_info">
+						<div class="acc">
+							<p><b>Description:</b></p><p class="composer"><b>
+							Composer:</b> 
+							Benjamin Tissot (also known as Bensound)							
 
-<div id="single_sample_player">
+							<p><p>Corporate motivational royalty&nbsp;free music track featuring electric guitar, bass, drums, piano and strings. A nice track for corporate videos and presentations.</p>
 
-    
+<p>&nbsp;</p>
 
-    <div class="player large">
-        <div class="metadata">
-            
-                <a class="mp3_file" href="/data/previews/410/410574_625529-lq.mp3" title="mp3 file">Game background Music loop short - mp3 version</a>
-<a class="ogg_file" href="/data/previews/410/410574_625529-lq.ogg" title="ogg file">Game background Music loop short - ogg version</a>
-<a class="waveform" href="/data/displays/410/410574_625529_wave_L.png"
-   title="waveform file">Game background Music loop short - waveform</a>
-<a class="spectrum" href="/data/displays/410/410574_625529_spec_L.jpg"
-   title="spectrogram file">Game background Music loop short - spectrogram</a>
-<span class="duration" title="duration in seconds">16053.3</span>
-
-            
-        </div>
-    </div>
-</div>
-
-<div id="single_sample_content" class="">
-    <img src="/media/images/40x40_avatar.png" alt="avatar" id="sound_author_avatar" />
-
-    <div id="sound_author_box">
-        <div id="sound_author"><a href="/people/yummie/">yummie</a></div>
-        <div id="sound_date">November 12th, 2017</div>
-    </div>
-    <div id="sound_description">
-        <p>This Audio track was created with Apple Garageband back in 2013.</p>
-
-<p>It was part of a game I made for my bachelors thesis.</p>
-
-<p>This was the loop music loop while playing the game.</p>
-        
-    </div>
-
-    <ul class="tags">
-        
-            <li><a href="/browse/tags/funk/">funk</a></li>
-        
-            <li><a href="/browse/tags/strings/">strings</a></li>
-        
-            <li><a href="/browse/tags/comic/">comic</a></li>
-        
-            <li><a href="/browse/tags/funky/">funky</a></li>
-        
-            <li><a href="/browse/tags/action/">action</a></li>
-        
-            <li><a href="/browse/tags/ambient/">ambient</a></li>
-        
-            <li><a href="/browse/tags/background/">background</a></li>
-        
-            <li><a href="/browse/tags/music/">music</a></li>
-        
-            <li><a href="/browse/tags/base/">base</a></li>
-        
-            <li><a href="/browse/tags/theme/">theme</a></li>
-        
-            <li><a href="/browse/tags/guitar/">guitar</a></li>
-        
-            <li><a href="/browse/tags/game/">game</a></li>
-        
-            <li><a href="/browse/tags/synth/">synth</a></li>
-        
-            <li><a href="/browse/tags/positive/">positive</a></li>
-        
-            <li><a href="/browse/tags/perceussion/">perceussion</a></li>
-        
-            <li><a href="/browse/tags/bass/">bass</a></li>
-        
-            <li><a href="/browse/tags/funny/">funny</a></li>
-        
-    </ul>
-
-
-    <div id="comments_container">
-        <h4 id="comments_heading">Comments</h4>
-        <a name="comments"></a>
-        
-            <ul id="comments">
+<p>Image Copyright:&nbsp;BABAROGA</p>
+							
+							
+						</div>
+						
+					</div><!--end product_info-->
+				
+			</div><!--end product_info_acc-->
+			
+						
+						
+		<div id="player_focus">
+					<div class="player">
+						<audio id="playerenergy" preload="none" src="/bensound-music/bensound-energy.mp3" type="audio/mp3" controls="controls"></audio>
+					</div>
+										
+							</div>	
+		
+		
+										<p class="taglist">																		
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=energetic">energetic</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=upbeat">upbeat</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=corporate">corporate</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=motivation">motivation</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=success">success</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=confidence">confidence</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=presentation">presentation</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=business">business</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=rock">rock</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=electric">electric</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=guitar">guitar</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=motivational">motivational</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=youtube">youtube</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=video">video</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=commercial">commercial</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=advertising">advertising</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=professional">professional</a></span>
+																																				<span class="tag"><a href="http://www.bensound.com/index.php?route=product/search&amp;search=serious">serious</a></span></p>
+																										
+							                
+                                
                 
-                <li>
-                    <img src="/data/avatars/7684/7684661_S.jpg" alt="avatar" class="comment_avatar" />
-                    <div class="comment_info">
-                        <span class="comment_author"><a href="/people/Donald82/">Donald82</a></span>
-                        <span class="comment_date">1 month ago</span>
-
-                        
-                    </div>
-                    <p>Just used the sound again. This time in this video:<br /><a href="https://www.youtube.com/watch?v=bHuAPryxr_c" rel="nofollow">https://www.youtube.com/watch?v=bHuAPryxr_c</a></p>
-
-<p>Thanks :)</p>
-
-                    <div style="text-align: right; font-size: 10px; margin-bottom: -8px">
-                        
-
-    <!-- do noting -->
-
-
-                    </div>
-
-                </li>
                 
-                <li>
-                    <img src="/media/images/32x32_avatar.png" alt="avatar" class="comment_avatar" />
-                    <div class="comment_info">
-                        <span class="comment_author"><a href="/people/Patejto/">Patejto</a></span>
-                        <span class="comment_date">1 month ago</span>
-
-                        
-                    </div>
-                    <p>very cool</p>
-
-                    <div style="text-align: right; font-size: 10px; margin-bottom: -8px">
-                        
-
-    <!-- do noting -->
-
-
-                    </div>
-
-                </li>
                 
-                <li>
-                    <img src="/media/images/32x32_avatar.png" alt="avatar" class="comment_avatar" />
-                    <div class="comment_info">
-                        <span class="comment_author"><a href="/people/baran94/">baran94</a></span>
-                        <span class="comment_date">2 months ago</span>
+		</div>
+		<div id="license_focus">
+			
+			
+						<div id="freelicense">
+			<h3>FREE Creative Commons License</h3><p>You are free to use this music in your multimedia project (online videos(YouTube,...), websites, animations, etc.) <b>as long as you credit Bensound.com</b>, For example: "Music: <a href="https://www.bensound.com/"><b>www.bensound.com</b></a>" or "<a href="https://www.bensound.com/"><b>Royalty Free Music from Bensound</b></a>"
+			</p>
 
-                        
-                    </div>
-                    <p>cool! thanks</p>
-
-                    <div style="text-align: right; font-size: 10px; margin-bottom: -8px">
-                        
-
-    <!-- do noting -->
+			<div style="display: inline-block;"><p><span class="nothis">No Audiobook<br></span><span class="nothis">No Audio Podcast</span></p></div>
+			<div style="display: inline-block;"><p><span class="nothis">No Song Making<br></span><span class="nothis">No Music Remix</span></p></div>
 
 
-                    </div>
 
-                </li>
-                
-                <li>
-                    <img src="/media/images/32x32_avatar.png" alt="avatar" class="comment_avatar" />
-                    <div class="comment_info">
-                        <span class="comment_author"><a href="/people/alegroggg/">alegroggg</a></span>
-                        <span class="comment_date">2 months ago</span>
+						<a  href="bensound-music/bensound-energy.mp3" class="bouton_pop">Download</a>
+						</div>
+						<div id="prolicense">
+			<h3>PRO License <a href="licensing">(?)</a></h3>
+			
+			<ul>
+				<li>Mp3 + Wav</li>
+				<li>Credits Not Required</li>
+				<li>License Certificate</li>
+			</ul>
+			 
+				
+			<div class="product_desc">
+				<div class="pro_desc_conent">
+					<div class="options inputs clearfix">
+																											<div id="option-521" class="option">
+														<!--  <input type="radio" name="option[521]" value="922" id="option-value-922" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(922,521)" class="five_voir" id="option-value-922"> 
+								
+				&nbsp;€ 34
 
-                        
-                    </div>
-                    <p>perfect :)</p>
+				  - Add *&nbsp;</a>
+				  				 <span class="convus">
+				 	($38 USD)
+				 </span>
 
-                    <div style="text-align: right; font-size: 10px; margin-bottom: -8px">
-                        
+				</p>
 
-    <!-- do noting -->
+							  <p class="lic_des"><b>Standard License: </b>Online Videos (youtube,...), animation, slideshow, presentation, music on hold.</p>
+							  
+							  
+							  </div>
+							  
+							  							<!--  <input type="radio" name="option[521]" value="921" id="option-value-921" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(921,521)" class="five_voir" id="option-value-921"> 
+								
+				&nbsp;€ 65
 
+				  - Add *&nbsp;</a>
+				  				 <span class="convus">
+				 	($73 USD)
+				 </span>
 
-                    </div>
+				</p>
 
-                </li>
-                
-                <li>
-                    <img src="/data/avatars/7684/7684661_S.jpg" alt="avatar" class="comment_avatar" />
-                    <div class="comment_info">
-                        <span class="comment_author"><a href="/people/Donald82/">Donald82</a></span>
-                        <span class="comment_date">3 months, 3 weeks ago</span>
+							  <p class="lic_des"><b>Extended License: </b>Std License + Cinema, TV/Radio, software, game, application, cd, dvd, Public show.</p>
+							  
+							  
+							  </div>
+							  
+							  							<!--  <input type="radio" name="option[521]" value="920" id="option-value-920" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(920,521)" class="five_voir" id="option-value-920"> 
+								
+				€ 580
 
-                        
-                    </div>
-                    <p>Used the sound in this video:<br /><a href="https://www.youtube.com/watch?v=1s639VO8SP4" rel="nofollow">https://www.youtube.com/watch?v=1s639VO8SP4</a></p>
+				  - Add *</a>
+				  				 <span class="convus">
+				 	($646 USD)
+				 </span>
 
-<p>Really happy with it, thanks :)</p>
+				</p>
 
-                    <div style="text-align: right; font-size: 10px; margin-bottom: -8px">
-                        
+							  <p class="lic_des"><b>National TV/Radio Advertising: </b>Extended License + National TV/Radio Advertising for 1 year.</p>
+							  
+							  
+							  </div>
+							  
+							  							</div>
+							<br />
+														
+							
+													  						<input type="hidden" name="product_id" size="2" value="236" />
+						
+						 
 
-    <!-- do noting -->
+					</div><!--end inputs-->
+				</div>
 
+			</div><!--end product_desc-->
+			</div>
+						<div id="subscription">
+							<h3>PRO License Subscription (All Bensound's tracks)</h3>
+				<p class="lic_des"><b>All The Tracks for download and use</b><br />All the downloads in Standard License with mp3 + wav, Licence Certificate and optional credits.</p>
+				<div class="option">
+				<p class="pd_add"><a href="music-subscription-youtube-videos" class="five_voir" class="five_voir">€ 139 - Buy *</a></p>
+				</div>
+				
+			</div>
+			<span class="infotax">*Taxes can be added for European customers</p>
+		</div>
+		
+		
+		</div>
+	</div><!--end sixteen-->
+		
+	
+</div><!--end container-->
+<!-- end the main content area -->
 
-                    </div>
-
-                </li>
-                
-            </ul>
-
-            <div id="comments_pagination">
-                <ul class="pagination"><li class="disabled-previous-next">previous</li><li class="next-page"><a href="/people/yummie/sounds/410574/?page=2#comments" title="Next Page">next</a></li><li class="current-page">1</li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=2#comments" title="Page 2">2</a></li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=3#comments" title="Page 3">3</a></li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=4#comments" title="Page 4">4</a></li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=5#comments" title="Page 5">5</a></li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=6#comments" title="Page 6">6</a></li><li class="other-page"><a href="/people/yummie/sounds/410574/?page=7#comments" title="Page 7">7</a></li><p class="number_of_results">
-            
-                &nbsp|&nbsp 31 commentss
-            
-        </p></ul>
-
-
-            </div>
-        
-    </div> <!-- comments_container -->
-
-    
-    <center><p>Please <a href="/home/login/?next=/people/yummie/sounds/410574/">log in</a> to comment</center>
-    
-</div> <!-- single_sample_content -->
-
-<div id="single_sample_sidebar" class="">
-     <div id="single_sample_ratings">
-         <div class="stars">
-            <ul class="star-rating">
-    <li class="current-rating" style="width:90%;">Currently /5 Stars.</li>
-    
-</ul>
-            <span class="numratings">(50)</span>
-        </div>
-     </div>
-
-    <div id="download">
-    
-        
-            <a href="/people/yummie/sounds/410574/download/410574__yummie__game-background-music-loop-short.mp3" id="download_login_button" title="login to download"></a>
-        
-    
-        <div id="download_text"><a href="/people/yummie/sounds/410574/downloaders/">Downloaded<br /><b>8977</b> times</a></div>
-        <br style="clear: both;">
-    </div>
-
-    
-
-	<div id="sound_license">
-        <img src="/media/images/creative_commons.png" with="95" height="23" alt="Creative Commons" />
-        <a href="http://creativecommons.org/licenses/by/3.0/">This work is licensed under the Attribution License.</a>
-    </div>
-
-    <dl id="sound_information_box">
-        <dt><a href="/help/soundinfo/type/#mp3"><img src="/media/images/info.png" width="12" height="12" /></a>Type</dt><dd>Mp3 (.mp3)</dd>
-        <dt><a href="/help/soundinfo/duration/"><img src="/media/images/info.png" width="12" height="12" /></a>Duration</dt><dd>00:16:053</dd>
-        <dt><a href="/help/soundinfo/filesize/"><img src="/media/images/info.png" width="12" height="12" /></a>Filesize</dt><dd>255.0 KB</dd>
-
-        
-        <dt><a href="/help/soundinfo/bitrate/"><img src="/media/images/info_red.png" width="12" height="12" /></a>Bitrate</dt><dd>1378 kbps</dd>
-        
-        <dt><a href="/help/soundinfo/channels/"><img src="/media/images/info.png" width="12" height="12" /></a>Channels</dt><dd>Stereo</dd>
-    </dl>
-
-    <ul id="sound_links" style="padding-left: 23px">
-        
-        
-        <li><a id="pack_link" class="icon" href="/people/yummie/packs/23103/">Pack: Garageband Game Music</a></li>
-        
-        
-        
-        <li><a id="remixes_link" class="icon" href="/people/yummie/sounds/410574/remixes/">Remixes and Sources</a></li>
-        
-        
-        <li><a id="similar_sounds_link" rel="nofollow" class="icon" href="/people/yummie/sounds/410574/similar/">Similar sounds</a></li>
-        
-
-    
-
-        
-
-        
-
-        
-
-        
-
-    
-
-    </ul>
-
-    <div id="flag_sound">
-        Sound illegal or offensive? <a href="/people/yummie/sounds/410574/flag/" title="flag this sound as ilegal, offensive or other...">Flag it!</a>
-    </div>
-
-    <div id="share_links">
-        <p>
-            <span style="color:#999">Share url: </span><input style="padding: 3px;width: 192px;" type="text" readonly value="https://freesound.org/s/410574/" />
-        </p>
-        <div id="social_links">
-            <div class="social_link">
-                <div id="fb-root" style="float: left;"></div>
-                <script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-                <fb:like href="https://freesound.org/s/410574/" send="false" layout="button_count" width="55" show_faces="false" font="arial"></fb:like>
-            </div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-            <span id="tumblr_button_abc123" class="social_link"></span>
-            <div class="social_link">
-                <span id="show_embed_button" onclick="$('#embed_links').toggle(500);">Embed</span>
-            </div>
-            <br style="clear: both;" />
-        </div>
-        <div id="embed_links">
-            <div id="embed_large" class="embed_link">
-                <p>920 x 245</p>
-                <div class="embed_example embed_large" onclick="selectEmbedSize('large');"></div>
-            </div>
-            <div id="embed_medium" class="embed_link">
-                <p>481 x 86</p>
-                <div class="embed_example embed_medium" onclick="selectEmbedSize('medium');"></div>
-            </div>
-            <div id="embed_small" class="embed_link">
-                <p>375 x 30</p>
-                <div class="embed_example embed_small" onclick="selectEmbedSize('small');"></div>
-            </div>
-
-             <textarea id="embed_code" rows="4"></textarea>
-
-             <script type="text/javascript">
-
-                var tumblr_link_url = "https://freesound.org/people/yummie/sounds/410574/";
-                var tumblr_link_name = "yummie - Game background Music loop short";
-                var tumblr_link_description = "https://freesound.org";
-
-                function selectEmbedSize(size) {
-                    $('.embed_example').removeClass('embed_active');
-                    $('.embed_example.embed_'+size).addClass('embed_active');
-                    var sizes;
-                    if(size == 'large') sizes = [920, 245];
-                    if(size == 'medium') sizes = [481, 86];
-                    if(size == 'small') sizes = [375, 30];
-                    var embed_text = '<iframe frameborder="0" scrolling="no" src="https://freesound.org/embed/sound/iframe/410574/simple/SIZE/" width="WIDTH" height="HEIGHT"></iframe>';
-                    embed_text = embed_text.replace('SIZE', size);
-                    embed_text = embed_text.replace('WIDTH', sizes[0]);
-                    embed_text = embed_text.replace('HEIGHT', sizes[1]);
-                    $('#embed_code').text(embed_text);
-                }
-             </script>
-        </div>
-        <!--
-
-        <div id="share_content" style="display: none;">
-            <p>bla
-        </div> -->
-    </div>
-
-    
-
-</div> <!-- single_sample_sidebar -->
-
-<script type="text/javascript">
-    var tumblr_button = document.createElement("a");
-    tumblr_button.setAttribute("href", "https://www.tumblr.com/share/link?url=" + encodeURIComponent(tumblr_link_url) + "&name=" + encodeURIComponent(tumblr_link_name) + "&description=" + encodeURIComponent(tumblr_link_description));
-    tumblr_button.setAttribute("title", "Share on Tumblr");
-    tumblr_button.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('https://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;");
-    tumblr_button.innerHTML = "Share on Tumblr";
-    document.getElementById("tumblr_button_abc123").appendChild(tumblr_button);
-
-    $(function() {
-        unsecureImageCheck($('#id_comment'));
-
-        var is_following;
-        if ("False" == "True") is_following = true;
-        else is_following = false;
-        $("#follow_link_sound").click(function() {
-            follow_unfollow_user(is_following);
-        });
-
-        if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
-            // Only run this line when safari is the browser (code from http://stackoverflow.com/questions/5899783/detect-safari-using-jquery)
-            // See https://github.com/MTG/freesound/issues/836 about this code
-            var download_button = $('#download_button');
-            download_button.attr('onclick', '');
-            download_button.click(function(){
-                setTimeout(function(){
-                        _gaq.push(['_trackEvent', 'Sound', 'Download', 'sound_id:410574']);
-                        afterDownloadModal('/after-download-modal/','Game background Music loop short');
-                    }, 100)
-                }
-            );
-
-        }
-    });
-
-    function follow_unfollow_user(is_following) {
-
-        $("#follow_link_sound").unbind("click");
-
-        var url;
-        if (is_following) {
-            url = '/follow/unfollow_user/yummie/';
-        }
-        else {
-            url = '/follow/follow_user/yummie/';
-        }
-
-        $.ajax({
-
-            type: 'POST',
-            url: url,
-
-        success: function () {
-
-                is_following = !is_following;
-                $("#follow_error").hide();
-
-                if (is_following)
-                    $("#follow_link_sound").text("Unfollow this user");
-                else
-                    $("#follow_link_sound").text("Follow this user");
-
-                $("#follow_link_sound").click(function() {
-                    follow_unfollow_user(is_following);
-                });
-            },
-
-            error: function (data) {
-                $("#follow_error").show();
-                window.setTimeout(function(){
-                    $("#follow_error").fadeOut(200);
-                }, 3000);
-            }
-
-        });
-    }
-
+<script>
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+		$('audio').mediaelementplayer({
+			audioWidth: 80,
+			audioHeight: 25,
+			features: ['playpause','progress','current','tracks'],
+			videoVolume: 'horizontal'
+		});
+	});
+/* ]]> */
 </script>
+<script type="text/javascript"><!--
+ function add2Cart(id,pid){
+  
 
+  $.ajax({
+    url: 'index.php?route=checkout/cart/add',
+		type: 'post',
 
-</div> <!-- END of Content area -->
+    data:$('.pro_desc_conent input[type=\'text\'], .pro_desc_conent input[type=\'hidden\'], .pro_desc_conent input[type=\'radio\']:checked, .pro_desc_conent input[type=\'checkbox\']:checked, .pro_desc_conent select, .pro_desc_conent textarea').serialize()+'&option['+pid+']='+id,
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			} 
+			
+			if (json['success']) {
+				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="image/close.png" alt="" class="close" /></div>');
+					
+				$('.success').fadeIn('slow');
+				$('#cart').fadeIn();	
+				$('#cart-total').html(json['total']);
+				
+				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+			}	
+		}
+	});
+  }
 
-<br class="clear" />
+//--></script>
+ 
+</div>
+</div>
+<!-- start footer -->
+	<footer>
+		<div class="container">
+		
+			<div id="footer">
+				
+				<div>
+					<p style="margin-top: -10px;">
+					<a href="licensing">LICENSE</a><a href="music-subscription-youtube-videos">SUBSCRIPTION</a><a href="legal">LEGAL NOTICE</a><a href="privacy-policy">PRIVACY POLICY</a><a href="about">ABOUT</a><a href="contact-me">CONTACT</a><a href="help">FAQ</a>
 
+					<a class="social-link" title="Twitter" target="_blank" href="https://twitter.com/bensound"><svg class="social-icon" width="25" fill="#fff" height="19.969" viewBox="0 0 24 19.969"><path d="M24 2.377a9.668 9.668 0 0 1-2.828.793A5.029 5.029 0 0 0 23.337.383a9.727 9.727 0 0 1-3.127 1.222 4.864 4.864 0 0 0-3.594-1.59 5.015 5.015 0 0 0-4.8 6.184A13.877 13.877 0 0 1 1.668.936a5.115 5.115 0 0 0 1.523 6.726 4.83 4.83 0 0 1-2.229-.63 5.018 5.018 0 0 0 3.949 5 4.824 4.824 0 0 1-2.224.085 4.942 4.942 0 0 0 4.6 3.5 9.739 9.739 0 0 1-7.29 2.087 13.706 13.706 0 0 0 7.548 2.263c9.142 0 14.307-7.9 14-14.983A10.153 10.153 0 0 0 24 2.377z"></path></svg></a>
 
+					<a class="social-link"  title="Facebook" target="_blank" href="https://www.facebook.com/bensoundmusic"><svg id="social-f" class="social-icon" fill="#fff" width="25" height="21" viewBox="0 0 10.031 21"><path d="M10.016.033H6.9s-4.88-.5-4.88 4.5V6.6H.03L0 10.536h2.017v10.472h4.627V10.536h2.672l.65-3.935H6.644V5a1.142 1.142 0 0 1 1.36-1.352h1.982z"></path></svg></a>
 
-        </div>
-        </div>
-
-    <div id="footer_wrapper">
-        <div id="footer">
-            <div id="cookie-bar">
-                <div style="float:left">
-                    <p>
-                        We use cookies to ensure you get the best experience on our website. By browsing our site you agree to our use of cookies.
-                        <br>
-                        For more information check out our <a href="/help/cookies_policy">cookies policy</a>.
-                    </p>
-                </div>
-                <div style="float:right; margin-top:10px;margin-right:10px;">
-                    <button id="cookie-accept">Ok</button>
-                </div>
-                <br class="clear">
-
-            </div>
-            <div id="footer_links">
-                <a href="/help/developers/">Developers</a>
-                <a href="https://blog.freesound.org/">Blog</a>
-                <a href="/help/about/">About</a>
-                
-                <a href="/help/tos_web/">Terms of use</a>
-            </div>
-            <div id="footer_credits">
-                Design by <a href="http://www.pixelshell.com">Pixelshell</a>. Code by <a href="https://www.upf.edu/web/mtg">MTG (UPF)</a>. Some Rights Reserved.
-            </div>
-            </div>
-        </div>
-
-        <div id="fsmodal" class="modal"></div>
-    </body>
-
+					<a class="social-link" title="YouTube" target="_blank" href="https://www.youtube.com/c/bensoundmusic"><svg id="youtube" class="social-icon" fill="#fff"      viewBox="10 0 40 45" style="
+    background: #ff0000;
+    height: 23px;
+    width: 26px;
+    padding: 4px;
+">
+<path xmlns="http://www.w3.org/2000/svg" style="/* position: relative; *//* fill:#FFFFFF; *//* top: 20px; *//* left: -76px; *//* height: 120px; */" d="M21,32.53V11.47c0-1.091,1.187-1.769,2.127-1.214l17.82,10.53c0.923,0.546,0.923,1.882,0,2.427   l-17.82,10.53C22.187,34.299,21,33.621,21,32.53z"></path></svg></a>
+					</p>
+					
+				</div>
+				<div>
+					<p><a href="royalty-free-music">Bensound's Royalty Free Music</a> Copyright © 2012-2020					</p>
+				</div>
+				<div>
+					<img class="logo-p" src="image/paypal-logo2.png" />
+				</div>
+			</div>
+		
+				
+		</div><!--end container-->
+	</footer>
+		
+		</div>	
+</body>
 </html>
