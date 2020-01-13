@@ -46,9 +46,9 @@ local chefimage
 local userAnswer
 local correctAnswer
 
-level1Sound = audio.loadSound("Sounds/Level1screenmusic.mp3")
+level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
 
-level1SoundChannel = audio.play(level1Sound,{loops = -1})
+level2SoundChannel = audio.play(level1Sound,{loops = -1})
 
 local correctSound = audio.loadSound("Sounds/correct.mp3")
 local correctSoundChannel
@@ -79,7 +79,7 @@ secondsLeft = 60
 local function Mute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level1SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = true
         -- hide the mute button
@@ -92,7 +92,7 @@ end
 local function Unmute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level1SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = false
         -- hide the mute button
@@ -485,6 +485,7 @@ function scene:show( event )
         -- FUNTION CALLS
         ---------------------------------------------------------------------------------
         --call the functions
+        level2SoundChannel = audio.play(level2Sound,{loops = -1})
         textField.isVisible = true
         textField:addEventListener( "userInput", textFieldListener)
         points = 0
