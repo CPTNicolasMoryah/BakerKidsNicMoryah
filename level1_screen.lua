@@ -44,6 +44,10 @@ local textField
 local userAnswer
 local correctAnswer
 
+level1Sound = audio.loadSound("Sounds/Level1screenmusic.mp3")
+
+level1SoundChannel = audio.play(level1Sound,{loops = -1})
+
 local correctSound = audio.loadSound("Sounds/correct.mp3")
 local correctSoundChannel
 
@@ -55,7 +59,6 @@ local incorrectSoundChannel
 
 local loseSound = audio.loadSound("Sounds/lose.mp3")
 local loseSoundChannel
-
 -----------------------------------------------------------------------------------------
 -- GLOBAL VARIABLES
 -----------------------------------------------------------------------------------------
@@ -66,13 +69,39 @@ secondsLeft = 60
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
+local function Mute(touch)
+    if (touch.phase == "ended") then
+        -- pause the Sound
+        audio.pause(level1SoundChannel)
+        -- set the boolean variable to be false (sound is now muted)
+        SOUNDON = true
+        -- hide the mute button
+        muteButton.isVisible = false
+        -- make the unmute button visible
+        unmuteButton.isVisible = true
+    end
+end
+
+local function Unmute(touch)
+    if (touch.phase == "ended") then
+        -- pause the Sound
+        audio.pause(level1SoundChannel)
+        -- set the boolean variable to be false (sound is now muted)
+        SOUNDON = false
+        -- hide the mute button
+        muteButton.isVisible = true
+        -- make the unmute button visible
+        unmuteButton.isVisible = false
+    end
+end
+
 -- The function that will go to the main menu 
-local function gotoLoseScreen()
+local function YouLose1()
     composer.gotoScene( "YouLose1", {effect = "crossFade", time = 500})
 end
 
 -- The function that will go to the main menu 
-local function gotoWinScreen()
+local function YouWin1()
     timer.cancel(countDownTimer)
     composer.gotoScene( "YouWin1", {effect = "crossFade", time = 500})
 end
@@ -96,7 +125,7 @@ local function UpdateTime()
         timer.performWithDelay(1000, Visible)
         timer.cancel(countDownTimer)
         loseSoundChannel = audio.play(loseSound)
-        gotoLoseScreen()
+        composer.gotoScene( "YouLose1", {effect = "crossFade", time = 500})
     end
 end
 
@@ -256,7 +285,7 @@ local function textFieldListener( event )
             -- you win! after 5 points       
             if (points == 5) then
                 wonSoundChannel = audio.play(wonSound)
-                gotoWinScreen()
+                YouWin1()
 
             else
                 timer.performWithDelay(1000, AskQuestion)
@@ -299,7 +328,7 @@ local function textFieldListener( event )
                 timer.cancel(countDownTimer)
 
                 loseSoundChannel = audio.play(loseSound)
-            gotoLoseScreen()
+            YouLose1()
 
             end
         end

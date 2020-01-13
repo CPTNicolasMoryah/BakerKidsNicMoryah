@@ -44,7 +44,11 @@ local textField
 local userAnswer
 local correctAnswer
 
-local correctSound = audio.loadSound("Sounds/correct.mp3")
+local level3Sound = audio.loadSound("Sounds/Level3screenmusic.mp3")
+
+local level3SoundChannel = audio.play(level3Sound,{loops = -1})
+
+local correctSound = audio.loadSound("Sounds/correctsound.wav")
 local correctSoundChannel
 
 local wonSound = audio.loadSound("Sounds/win.mp3")
@@ -66,13 +70,39 @@ secondsLeft = 60
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
--- The function that will go to the main menu 
-local function gotoLoseScreen()
-    composer.gotoScene( "lose_screen", {effect = "crossFade", time = 500})
+local function Mute(touch)
+    if (touch.phase == "ended") then
+        -- pause the Sound
+        audio.pause(level3SoundChannel)
+        -- set the boolean variable to be false (sound is now muted)
+        SOUNDON = true
+        -- hide the mute button
+        muteButton.isVisible = false
+        -- make the unmute button visible
+        unmuteButton.isVisible = true
+    end
+end
+
+local function Unmute(touch)
+    if (touch.phase == "ended") then
+        -- pause the Sound
+        audio.pause(level3SoundChannel)
+        -- set the boolean variable to be false (sound is now muted)
+        SOUNDON = false
+        -- hide the mute button
+        muteButton.isVisible = true
+        -- make the unmute button visible
+        unmuteButton.isVisible = false
+    end
 end
 
 -- The function that will go to the main menu 
-local function gotoWinScreen()
+local function YouLose3()
+    composer.gotoScene( "YouLose3", {effect = "crossFade", time = 500})
+end
+
+-- The function that will go to the main menu 
+local function YouWin3()
     composer.gotoScene( "YouWin3", {effect = "crossFade", time = 500})
 end
 
@@ -95,7 +125,7 @@ local function UpdateTime()
         timer.performWithDelay(1000, Visible)
         timer.cancel(countDownTimer)
         loseSoundChannel = audio.play(loseSound)
-        composer.gotoScene( "lose_screen", {effect = "crossFade", time = 500})
+        composer.gotoScene( "YouLose3", {effect = "crossFade", time = 500})
 
     end
 end
@@ -143,49 +173,49 @@ local function AskQuestion()
     local word = math.random(1,15)
 
     if (word == 1) then
-        questionObject.text = "PE_PE_O_I"
+        questionObject.text = "PE_PERO_I"
         --questionObject.isVisible = true
 
-        correctAnswer = "PRN"
+        correctAnswer = "PN"
 
     elseif (word == 2) then
-        questionObject.text = "OL_V_ OI_"
+        questionObject.text = "OL_VE OI_"
         --questionObject.isVisible = true
 
-        correctAnswer = "IEL"
+        correctAnswer = "IL"
 
     elseif (word == 3) then
-        questionObject.text = "G_EEN PEP_ER_"
+        questionObject.text = "G_EEN PEP_ERS"
 
-        correctAnswer = "RPS"
+        correctAnswer = "RP"
 
     elseif (word == 4) then
-        questionObject.text = "RE_ PE_P_RS"
+        questionObject.text = "RE_  PEPP_RS"
 
-        correctAnswer = "I"
+        correctAnswer = "DE"
 
     elseif (word == 5) then
-        questionObject.text = "_U_TE_"
+        questionObject.text = "BU_TE_"
 
-        correctAnswer = "BTR"
+        correctAnswer = "TR"
 
     elseif (word == 6) then
-        questionObject.text = "TO_AT_ SA_CE"
+        questionObject.text = "TOMAT_  SA_CE"
 
-        correctAnswer = "MOU"
+        correctAnswer = "OU"
 
     elseif (word == 7) then
-        questionObject.text = "M_SH_OO_"
+        questionObject.text = "M_SHROO_S"
 
-        correctAnswer = "URM"
+        correctAnswer = "UM"
 
     elseif (word == 8) then
-        questionObject.text = "SW_ET ON_O_S"
+        questionObject.text = "SW_ET ON_ONS"
 
-        correctAnswer = "EIN"
+        correctAnswer = "EI"
 
     elseif (word == 9) then
-        questionObject.text = "G_ILLE_ ZUCCH_NI"
+        questionObject.text = "G_ILLE_  ZUCCH_NI"
 
         correctAnswer = "RDI"
 
@@ -195,14 +225,14 @@ local function AskQuestion()
         correctAnswer = "AER"
 
     elseif (word == 11) then
-        questionObject.text = "RE_ O_ION_"
+        questionObject.text = "RE_  O_IONS"
 
-        correctAnswer = "DNS"
+        correctAnswer = "DN"
 
     elseif (word == 12) then
-        questionObject.text = "ROMA T_MAT_E_"
+        questionObject.text = "T_MAT_ES"
 
-        correctAnswer = "OOS"
+        correctAnswer = "OO"
 
     elseif (word == 13) then
         questionObject.text = "ROS_ED G_RL_C"
@@ -210,14 +240,14 @@ local function AskQuestion()
         correctAnswer = "TAI"
 
     elseif (word == 14) then
-        questionObject.text = "_RU_CHE_TA"
+        questionObject.text = "CHE_D_R"
 
-        correctAnswer = "BCT"
+        correctAnswer = "DA"
 
     elseif (word == 15) then
-        questionObject.text = "PI_E_PP_E"
+        questionObject.text = "PINE_PP_E"
 
-        correctAnswer = "NAL"
+        correctAnswer = "AL"
 
     end
 
@@ -255,8 +285,8 @@ local function textFieldListener( event )
 
             -- you win! after 5 points       
             if (points == 5) then
-                wonSoundChannel = audio.play(wonSound)
-                composer.gotoScene( "win_screen", {effect = "crossFade", time = 500})
+                audio.stop(level3SoundChannel) 
+                composer.gotoScene( "YouWin3", {effect = "crossFade", time = 500})
 
             else
                 timer.performWithDelay(1000, AskQuestion)
@@ -298,8 +328,8 @@ local function textFieldListener( event )
 
                 timer.cancel(countDownTimer)
 
-                loseSoundChannel = audio.play(loseSound)
-                gotoLoseScreen()
+                audio.stop(level3SoundChannel)
+                YouLose3()
             end
         end
         event.target.text = ""
@@ -425,6 +455,7 @@ function scene:show( event )
         -- FUNTION CALLS
         ---------------------------------------------------------------------------------
         --call the functions
+
         textField.isVisible = true
         textField:addEventListener( "userInput", textFieldListener)
         points = 0
@@ -432,6 +463,8 @@ function scene:show( event )
         StartTimer()
         Visible()
         AskQuestion()
+
+
 
     end
 
@@ -450,6 +483,8 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
+
+        level2done = true
 
     -------------------------------------------------------------------------------------
         textField:removeEventListener( "userInput", textFieldListener)
