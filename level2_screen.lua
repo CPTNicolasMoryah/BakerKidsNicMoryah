@@ -786,7 +786,7 @@ local function BakingSoda1Q( event )
     userAnswerBakingSoda1 = tostring(event.target.text)     
     if(event.phase=="submitted")then
         userAnswerBakingSoda2 = tostring(event.target.text)
-        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
+        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1) and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
             native.setKeyboardFocus( nil )
             BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
             BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
@@ -939,7 +939,7 @@ local function EggsQ( event )
        Eggs1TextField.text=""
     elseif(event.phase=="submitted")then
         userAnswerEggs = tostring(event.target.text)
-        if (userAnswerEggs == ANSWEREGGS)then
+        if (userAnswerEggs == ANSWEREGGS) or (userAnswerEggs == CAPITOLANSWEREGGS) then
             native.setKeyboardFocus( nil )
             Eggs1TextField:removeEventListener("userInput", EggsQ)        
             correctObject.isVisible = true
@@ -990,7 +990,7 @@ local function FlourQ( event )
        FlourTextField.text=""
     elseif(event.phase=="submitted")then
         userAnswerFlour = tostring(event.target.text)
-        if (userAnswerFlour == ANSWERFLOUR)then
+        if (userAnswerFlour == ANSWERFLOUR) or (userAnswerFlour == CAPITOLANSWERFLOUR) then
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
             correctObject.isVisible = true
@@ -1042,7 +1042,7 @@ local function MilkQ( event )
        MilkTextField.text=""
     elseif(event.phase=="submitted")then
         userAnswerMilk = tostring(event.target.text)
-        if (userAnswerMilk == ANSWERMILK)then
+        if (userAnswerMilk == ANSWERMILK) or (userAnswerMilk == CAPITOLANSWERMILK)then
             native.setKeyboardFocus( nil )
             MilkTextField:removeEventListener("userInput", MilkQ)
             correctObject.isVisible = true
@@ -1093,7 +1093,7 @@ local function SaltQ( event )
        SaltTextField.text=""
     elseif(event.phase=="submitted")then
         userAnswerSalt = tostring(event.target.text)
-        if (userAnswerSalt == ANSWERSALT)then
+        if (userAnswerSalt == ANSWERSALT) or (userAnswerSalt == CAPITOLANSWERSALT) then
             native.setKeyboardFocus( nil )
             SaltTextField:removeEventListener("userInput", SaltQ)
             correctObject.isVisible = true
@@ -1144,7 +1144,7 @@ local function SugarQ( event )
        SugarTextField.text=""
     elseif(event.phase=="submitted")then
         userAnswerSugar = tostring(event.target.text)
-        if (userAnswerSugar == ANSWERSUGAR)then
+        if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) then
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
             correctObject.isVisible = true
