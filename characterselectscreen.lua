@@ -51,6 +51,13 @@ local function clickchef(touch)
         composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     end
 end
+
+local function clickcashier(touch)
+    Cashier1 = true
+    if (level2done == false) then
+        composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
+    end
+end
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -145,6 +152,7 @@ function scene:show( event )
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
         chef:addEventListener("touch", clickchef)
+        Cashier:addEventListener("touch", clickcashier)
     end
 
 end -- function scene:show( event )
