@@ -53,7 +53,7 @@ local function pauseMusic(touch)
         audio.pause(level2SoundChannel)  
         muteVolumeButton.isVisible = true
         volumeButton.isVisible = false
-        soundOn = false  
+        SOUNDON = false  
     end
 end
 
@@ -63,7 +63,7 @@ local function playMusic( touch )
         audio.resume(level2SoundChannel)
         muteVolumeButton.isVisible = false
         volumeButton.isVisible = true
-        soundOn = true
+        SOUNDON = true
     end
 end
 
@@ -202,7 +202,7 @@ function scene:show( event )
     elseif ( phase == "did" ) then
 
 
-        if (soundOn == true) then     
+        if (SOUNDON == true) then     
             audio.resume(level2SoundChannel)
             muteVolumeButton.isVisible = false
             volumeButton.isVisible = true
