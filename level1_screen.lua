@@ -41,12 +41,14 @@ local questionObject
 
 local textField
 
+local chefimage
+
 local userAnswer
 local correctAnswer
 
-level1Sound = audio.loadSound("Sounds/Level1screenmusic.mp3")
+level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
 
-level1SoundChannel = audio.play(level1Sound,{loops = -1})
+level2SoundChannel = audio.play(level1Sound,{loops = -1})
 
 local correctSound = audio.loadSound("Sounds/correct.mp3")
 local correctSoundChannel
@@ -72,7 +74,7 @@ secondsLeft = 60
 local function Mute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level1SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = true
         -- hide the mute button
@@ -85,7 +87,7 @@ end
 local function Unmute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level1SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = false
         -- hide the mute button
@@ -395,6 +397,31 @@ function scene:create( event )
     textField = native.newTextField( display.contentWidth/2, 280, 150, 80)
     textField.inputType = "default"
 
+    chefimage = display.newImageRect("Images/chef.png", 200, 200)
+    chefimage.height = 350
+    chefimage.width = 100
+    chefimage.x = 50
+    chefimage.y = 550
+    if (chef1 == true) then
+        chefimage.isVisible = true
+    else
+        chefimage.isVisible = false
+    end
+
+    Cashier = display.newImageRect( "Images/cashier.png", 0,0 )
+    Cashier.height = 350
+    Cashier.width = 100
+    Cashier.x = 50
+    Cashier.y = 550
+
+    cashoverlay = display.newImageRect( "Images/Level1ScreenMoryah1.png",0,0)
+    cashoverlay.anchorX = 0
+    cashoverlay.anchorY = 1536
+    cashoverlay.x = 1
+    cashoverlay.y = 840
+    cashoverlay.height = 398
+    cashoverlay.width = 320
+    sceneGroup:toFront( cashoverlay )
     -- Creating Back Button
     backButton = widget.newButton( 
     {
@@ -428,6 +455,7 @@ function scene:create( event )
     sceneGroup:insert( correctObject )
     sceneGroup:insert( incorrectObject )
     sceneGroup:insert( questionObject )
+    sceneGroup:insert( chefimage )
 
 
 end --function scene:create( event )
@@ -456,6 +484,7 @@ function scene:show( event )
         -- FUNTION CALLS
         ---------------------------------------------------------------------------------
         --call the functions
+        level2SoundChannel = audio.play(level2Sound,{loops = -1})
         textField.isVisible = true
         textField:addEventListener( "userInput", textFieldListener)
         points = 0
@@ -463,6 +492,7 @@ function scene:show( event )
         StartTimer()
         Visible()
         AskQuestion()
+
 
     end
 

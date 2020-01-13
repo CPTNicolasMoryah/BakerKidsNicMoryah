@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "YouLose"
+sceneName = "YouLose3"
 
 -----------------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ local function Level3ScreenTransition( )
     composer.gotoScene("level3_screen")
 end 
 local function mainmenuTransition()
-    composer.removeScene("level3_screen")
+    --composer.removeScene("level3_screen")
    composer.gotoScene( "main_menu" )
 end
 -----------------------------------------------------------------------------------------

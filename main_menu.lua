@@ -6,6 +6,10 @@
 -- Description: This is the main menu, displaying the credits, instructions & play buttons.
 -----------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------
+--GLOBAL VARIABLES
+---------------------------------------------------------------------------------------
+level2done = false
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
 -----------------------------------------------------------------------------------------
@@ -34,6 +38,7 @@ local bkg_image
 local playButton
 local creditsButton
 local instructionsButton
+local characterscreenButton 
 
 local muteButton
 local unmuteButton
@@ -99,6 +104,11 @@ end
 local function InstructionsTransition( )
     composer.gotoScene("instructions", {effect = "crossFade", time = 500})
 end
+
+local function characterscreentransition( )
+    composer.gotoScene("characterselectscreen", {effect = "crossFade", time = 500})
+end
+
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -193,6 +203,19 @@ function scene:create( event )
             onRelease = InstructionsTransition
         } ) 
 
+    characterscreenButton = widget.newButton(
+    {
+        x = 140,
+        y = display.contentHeight*2/10,
+
+        width = 150,
+        height = 150,
+
+        defaultFile = "Images/characterselectbutton.png", 170, 170,
+        overFile = "Images/characterselectbutton.png", 170, 170,
+
+        onRelease = characterscreentransition
+    } ) 
     unmuteButton = display.newImageRect("Images/unmuteButton.png", 90, 90)
     unmuteButton.x = 900
     unmuteButton.y = 148
@@ -211,6 +234,7 @@ function scene:create( event )
     sceneGroup:insert( instructionsButton )
     sceneGroup:insert( unmuteButton )
     sceneGroup:insert( muteButton )
+    sceneGroup:insert( characterscreenButton )
     
 
 end -- function scene:create( event )   

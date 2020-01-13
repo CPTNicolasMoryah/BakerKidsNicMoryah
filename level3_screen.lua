@@ -44,9 +44,9 @@ local textField
 local userAnswer
 local correctAnswer
 
-local level3Sound = audio.loadSound("Sounds/Level3screenmusic.mp3")
+local level2Sound = audio.loadSound("Sounds/Level2screenmusic.mp3")
 
-local level3SoundChannel = audio.play(level3Sound,{loops = -1})
+local level2SoundChannel 
 
 local correctSound = audio.loadSound("Sounds/correctsound.wav")
 local correctSoundChannel
@@ -73,7 +73,7 @@ secondsLeft = 60
 local function Mute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level3SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = true
         -- hide the mute button
@@ -86,7 +86,7 @@ end
 local function Unmute(touch)
     if (touch.phase == "ended") then
         -- pause the Sound
-        audio.pause(level3SoundChannel)
+        audio.pause(level2SoundChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = false
         -- hide the mute button
@@ -285,7 +285,7 @@ local function textFieldListener( event )
 
             -- you win! after 5 points       
             if (points == 5) then
-                audio.stop(level3SoundChannel) 
+                audio.stop(level2SoundChannel) 
                 composer.gotoScene( "YouWin3", {effect = "crossFade", time = 500})
 
             else
@@ -328,7 +328,7 @@ local function textFieldListener( event )
 
                 timer.cancel(countDownTimer)
 
-                audio.stop(level3SoundChannel)
+                audio.stop(level2doneSoundChannel)
                 YouLose3()
             end
         end
@@ -455,7 +455,7 @@ function scene:show( event )
         -- FUNTION CALLS
         ---------------------------------------------------------------------------------
         --call the functions
-
+        level2SoundChannel = audio.play(level2Sound,{loops = -1})
         textField.isVisible = true
         textField:addEventListener( "userInput", textFieldListener)
         points = 0
