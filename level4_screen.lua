@@ -709,7 +709,7 @@ local function ChocolateChips1Q( event )
             ChocolateChips2TextField:removeEventListener("userInput", ChocolateChips2Q)
             native.setKeyboardFocus( nil )
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctsound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -727,7 +727,7 @@ local function ChocolateChips1Q( event )
             checkAnswers()
             native.setKeyboardFocus( nil )
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life")
@@ -746,7 +746,7 @@ local function ChocolateChips2Q( event )
             ChocolateChips1TextField:removeEventListener("userInput", ChocolateChips1Q)
             ChocolateChips2TextField:removeEventListener("userInput", ChocolateChips2Q)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -764,7 +764,7 @@ local function ChocolateChips2Q( event )
             checkAnswers()
             native.setKeyboardFocus( nil )
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life")
@@ -784,7 +784,7 @@ local function ChocolateChips3Q( event )
             ChocolateChips2TextField:removeEventListener("userInput", ChocolateChips2Q)
             ChocolateChips3TextField:removeEventListener("userInput", ChocolateChips3Q)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -802,7 +802,7 @@ local function ChocolateChips3Q( event )
             checkAnswers()
             native.setKeyboardFocus( nil )
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life")
@@ -833,7 +833,7 @@ local function BakingSoda1Q( event )
             BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
             BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -853,7 +853,7 @@ local function BakingSoda1Q( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -879,7 +879,7 @@ local function BakingSoda2Q( event )
             BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
             BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -899,7 +899,7 @@ local function BakingSoda2Q( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -933,7 +933,7 @@ local function ButterQ( event )
             native.setKeyboardFocus( nil )
             ButterTextField:removeEventListener("userInput", ButterQ)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -950,7 +950,7 @@ local function ButterQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -985,7 +985,7 @@ local function EggsQ( event )
             native.setKeyboardFocus( nil )
             Eggs1TextField:removeEventListener("userInput", EggsQ)        
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1001,7 +1001,7 @@ local function EggsQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1036,7 +1036,7 @@ local function FlourQ( event )
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1052,7 +1052,7 @@ local function FlourQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1088,7 +1088,7 @@ local function VanillaQ1( event )
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
             correctObject.isVisible = true
-            if (soundOn == true ) then 
+            if (SOUNDON == true ) then 
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1104,7 +1104,7 @@ local function VanillaQ1( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1129,7 +1129,7 @@ local function VanillaQ( event )
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
             correctObject.isVisible = true
-            if (soundOn == true ) then 
+            if (SOUNDON == true ) then 
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1145,7 +1145,7 @@ local function VanillaQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1180,7 +1180,7 @@ local function SaltQ( event )
             native.setKeyboardFocus( nil )
             SaltTextField:removeEventListener("userInput", SaltQ)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1195,7 +1195,7 @@ local function SaltQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1231,7 +1231,7 @@ local function SugarQ( event )
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
             correctObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 correctSoundChannel = audio.play(correctSound)
             end
             timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
@@ -1245,7 +1245,7 @@ local function SugarQ( event )
             native.setKeyboardFocus( nil )
             checkAnswers()
             incorrectTextObject.isVisible = true
-            if (soundOn == true) then
+            if (SOUNDON == true) then
                 incorrectSoundChannel = audio.play(incorrectSound)
             end
             incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
@@ -1558,7 +1558,7 @@ function scene:show( event )
     if ( phase == "will" ) then
         --composer.removeScene("mainmenu")
         AddEventListeners() 
-        if (soundOn == true) then    
+        if (SOUNDON == true) then    
             audio.resume(level2SoundChannel)
         else
             audio.pause(level2SoundChannel)
