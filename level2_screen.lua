@@ -273,8 +273,8 @@ local function BakingPowder( )
     BakingPowder2TextField.y = BakingPowder2TextField.y + 2.5
     BakingPowder2TextField:scale(1.006,1.006)
     if (BakingPowder1.x >= display.contentCenterX) then
-        BakingPowder2TextField.size = 30
-        BakingPowder1TextField.size = 30
+        BakingPowder2TextField.size = 25
+        BakingPowder1TextField.size = 25
         timer.cancel(bakingpowdertimer)       
     else
         bakingpowdertimer = timer.performWithDelay(-0.1,BakingPowder)  
@@ -295,8 +295,8 @@ local function BakingSoda( )
     BakingSoda2TextField:scale(1.005,1.007)
     BakingSoda1TextField:scale(1.007,1.007)
     if (BakingSoda1.x >= display.contentCenterX)then
-        BakingSoda1TextField.size = 25
-        BakingSoda2TextField.size = 25
+        BakingSoda1TextField.size = 23
+        BakingSoda2TextField.size = 23
         timer.cancel(BakingSodaTimer)
     else
         BakingSodaTimer = timer.performWithDelay(-0.01, BakingSoda)        
@@ -312,7 +312,7 @@ local function Butter1( )
     ButterTextField:scale(1.005,1.005)
     if(Butter.x == display.contentCenterX)then
         timer.cancel(ButterTimer)
-        ButterTextField.size = 25
+        ButterTextField.size = 23
     else
         ButterTimer = timer.performWithDelay(-0.1, Butter1)
     end
@@ -332,7 +332,7 @@ local function Eggs( )
     Eggs2:scale(1.002,1.002)
     if(Eggs1.x == display.contentCenterX)then
         timer.cancel(EggsTimer)
-        Eggs1TextField.size = 25
+        Eggs1TextField.size = 23
     else
         EggsTimer = timer.performWithDelay(-0.3,Eggs)
     end
@@ -347,7 +347,7 @@ local function Flour1( )
     FlourTextField:scale(1.005,1.005)
     if(Flour.x == display.contentCenterX)then
         timer.cancel(FlourTimer)
-        FlourTextField.size = 30
+        FlourTextField.size = 25
     else
         FlourTimer = timer.performWithDelay(-0.1,Flour1)
     end
@@ -363,7 +363,7 @@ local function Milk1( )
     MilkTextField:scale(1.005,1.005)
     if(Milk.x <= display.contentCenterX)then
         timer.cancel(MilkTimer)
-        MilkTextField.size = 28
+        MilkTextField.size = 23
     else
         MilkTimer = timer.performWithDelay(-0.23, Milk1)
     end
@@ -378,7 +378,7 @@ local function Salt1( )
     SaltTextField:scale(1.0015,1.0015)
     if(Salt.x >= display.contentCenterX)then
         timer.cancel(SaltTimer)
-        SaltTextField.size = 22
+        SaltTextField.size = 20
 
     else
         SaltTimer = timer.performWithDelay(-0.3, Salt1)
