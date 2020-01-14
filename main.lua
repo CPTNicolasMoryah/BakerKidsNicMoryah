@@ -7,6 +7,11 @@
 -- Hiding Status Bar
 -- HIDE THE STATUS BAR
 
+----------------------------------------------------------------------------------------
+--GLOBAL VARIABLES
+----------------------------------------------------------------------------------------
+stars = 0
+
 -----------------------------------------------------------------------------------------
 
 -- Use composer library
@@ -22,7 +27,7 @@ local composer = require( "composer" )
 --composer.gotoScene( "level1_screen" )
 --composer.gotoScene( "splashscreen" )
 --composer.gotoScene( "level3_screen" )
-composer.gotoScene( "level4_screen" )
+--composer.gotoScene( "level4_screen" )
 --composer.gotoScene( "level2_screen" )
 --composer.gotoScene( "YouLose" )
 --composer.gotoScene( "YouWin1" )
@@ -30,4 +35,4 @@ composer.gotoScene( "level4_screen" )
 --composer.gotoScene( "main_menu" )
 --composer.gotoScene( "instructions" )
 --composer.gotoScene( "credits_screen" )
---composer.gotoScene( "characterselectscreen" )
+composer.gotoScene( "characterselectscreen" )

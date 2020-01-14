@@ -33,7 +33,17 @@ scene = composer.newScene( sceneName ) -- This function doesn't accept a string,
 -----------------------------------------------------------------------------------------
 local bkg_image
 local backButton
-
+local lock1
+local lock2
+local lock3
+local lock4
+local startext1
+local startext2
+local startext3
+local startext4
+local star1
+local star2
+local star3
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -89,10 +99,42 @@ function scene:create( event )
     bkg.width = display.contentWidth
     bkg.height = display.contentHeight
 
+
+    lock1 = display.newImageRect("Images/lock.png", 200, 200) 
+    lock1.x = 120
+    lock1.y = 400
+
+    startext1 = display.newText("3", 200, 200, Arial, 35) 
+    startext1.x = 100
+    startext1.y = 400 
+
+    star1 = display.newImage("Images/star1.png")
+    star1.x = 140
+    star1.y = 400
+    star1.width = 35
+    star1.height = 35
+
+    star2 = display.newImage("Images/star2.png")
+    star2.x = display.contentWidth/2
+    star2.y = 450
+    star2.width = 200
+    star2.height = 200
+
+    star3 = display.newImage("Images/star3.png")
+    star3.x = display.contentWidth*6/8
+    star3.y = 450
+    star3.width = 200
+    star3.height = 200
+    
+
     -- Associating display objects with this scene 
     sceneGroup:insert( Cashier )
     sceneGroup:insert( chef )
     sceneGroup:insert( bkg )
+    sceneGroup:insert(lock1)
+    sceneGroup:insert( star3 )
+    sceneGroup:insert( star2 )
+    sceneGroup:insert( star1 )
 
 
 

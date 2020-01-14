@@ -386,11 +386,11 @@ local function Eggs( )
     Eggs2.x = Eggs2.x - 0.8
     Eggs2.y = Eggs2.y + 1
     Eggs2:scale(1.002,1.002)
-    if(Eggs1.x >= display.contentCenterX)then
+    if(Eggs1.x <= display.contentCenterX)then
         timer.cancel(EggsTimer)
         Eggs1TextField:resizeFontToFitHeight()
     else
-        EggsTimer = timer.performWithDelay(-0.1,  Eggs)
+        EggsTimer = timer.performWithDelay(-0.1, Eggs)
     end
 end
 local function Flour1( )
@@ -471,7 +471,7 @@ end
 local function chooseRandomIng(  )
     print(""..totalIngredients)
     if (pauseinstructions == false) then
-       randomIng = math.random(4,4)
+       randomIng = math.random(1,8)
        if (randomIng == 1) then
         if (ChocolateChipsComplete == true) then
             while (randomIng == 1) do
