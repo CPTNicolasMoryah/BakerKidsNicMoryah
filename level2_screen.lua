@@ -28,7 +28,6 @@ local scene = composer.newScene( sceneName )
 -----------------------------------------------------------------------------------------
 pauseinstructions = false
 saycorrect = false
-
 -----------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
 -----------------------------------------------------------------------------------------
@@ -110,7 +109,6 @@ local userAnswerSugar
 local pauseButton
 
 local totalseconds = 60
-local lives = 4
 local secondsleft = 60
 
 local BakingPowerComplete = false
@@ -679,11 +677,11 @@ end
 
 local function checkAnswers(  )
     lives = lives-1
-    if(lives==3)then
+    if(lives == 2)then
         heart3.isVisible=false
-    elseif(lives==2) then
+    elseif(lives == 1) then
         heart2.isVisible=false
-    elseif(lives==1)then
+    elseif(lives == 0)then
         heart1.isVisible=false
         youLoseTransition()
     end    
@@ -702,7 +700,7 @@ end
 local function BakingPowder1Q( event )
     userAnswerBakingPowder1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1)  or (CAPITALANSWERBAKINGPOWDER1)then
+        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1)  or (userAnswerBakingPowder1 == CAPITALANSWERBAKINGPOWDER1)then
             BakingPowder1TextField:removeEventListener("userInput", BakingPowder1Q)
             BakingPowder2TextField:removeEventListener("userInput", BakingPowder2Q)
             native.setKeyboardFocus( nil )
@@ -1462,6 +1460,7 @@ function scene:show( event )
 
     if ( phase == "will" ) then
         --composer.removeScene("mainmenu")
+        lives = 3
         AddEventListeners() 
         if (SOUNDON == true) then    
             audio.resume(level2SoundChannel)

@@ -6,6 +6,10 @@
 -- Date: nov. 21, 2019
 -- Description: This is the level 1 screen of the game.
 -----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-- GLOBAL VARIABLES
+-----------------------------------------------------------------------------------------
+lives = 3
 
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
@@ -35,7 +39,6 @@ local countDownTimer
 local clockText
 local points = 0
 local pointsText
-local lives = 3
 
 local questionObject
 
@@ -457,6 +460,7 @@ function scene:create( event )
     sceneGroup:insert( incorrectObject )
     sceneGroup:insert( questionObject )
     sceneGroup:insert( chefimage )
+    sceneGroup:insert( Cashier )
     sceneGroup:insert( cashoverlay )
 
 end --function scene:create( event )

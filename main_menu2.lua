@@ -9,8 +9,7 @@
 ---------------------------------------------------------------------------------------
 --GLOBAL VARIABLES
 ---------------------------------------------------------------------------------------
-level2done = false
-stars = 0
+level2done = true
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
 -----------------------------------------------------------------------------------------
@@ -19,7 +18,7 @@ stars = 0
 local composer = require( "composer" )
 
 -- Naming Scene
-sceneName = "main_menu"
+sceneName = "main_menu2"
 
 -----------------------------------------------------------------------------------------
 
@@ -96,7 +95,7 @@ end
 
 -- INSERT LOCAL FUNCTION DEFINITION THAT GOES TO INSTRUCTIONS SCREEN 
 local function LevelSelectTransition( )
-    composer.gotoScene("level_select1", {effect = "crossFade", time = 500})
+    composer.gotoScene("level_select2", {effect = "crossFade", time = 500})
 end
 
 -----------------------------------------------------------------------------------------

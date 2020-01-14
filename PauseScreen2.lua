@@ -43,7 +43,7 @@ local function Backtolevel2(  )
 end
 
 local function restartLevel2(  )
-    composer.removeScene("level4_screen")
+    composer.removeScene("level2_screen")
     composer.gotoScene("level2_screen")
 end
 
