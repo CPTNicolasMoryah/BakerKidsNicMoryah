@@ -57,13 +57,25 @@ local function giveStars( )
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 3
+        file, errorString = io.open( path, "w" )
+        file:write( starsAsString )
+        print ("***New stars = " .. stars)
+        io.close( file )
     elseif (lives == 2) then
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 2
+        file, errorString = io.open( path, "w" )
+        file:write( starsAsString )
+        print ("***New stars = " .. stars)
+        io.close( file )
     else
         star1.isVisible = true
         stars = stars + 1
+        file, errorString = io.open( path, "w" )
+        file:write( starsAsString )
+        print ("***New stars = " .. stars)
+        io.close( file )
     end
 end
 -----------------------------------------------------------------------------------------

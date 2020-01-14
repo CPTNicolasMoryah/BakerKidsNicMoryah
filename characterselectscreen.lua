@@ -44,6 +44,10 @@ local startext4
 local star1
 local star2
 local star3
+
+
+---------------
+
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -57,6 +61,10 @@ local function clickchef(touch)
     if (stars >= 3) then
         chef1 = true
         stars = stars - 3
+        file, errorString = io.open( path, "w" )
+        file:write( starsAsString )
+        print ("***New stars = " .. stars)
+        io.close( file )
         if (level2done == false) then
             composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
         else
@@ -66,9 +74,13 @@ local function clickchef(touch)
 end
 
 local function clickcashier(touch)
-    if (stars >= 6) then
+    if (stars <= 6) then
         Cashier1 = true
         stars = stars - 6
+        file, errorString = io.open( path, "w" )
+        file:write( starsAsString )
+        print ("***New stars = " .. stars)
+        io.close( file )
         if (level2done == false) then
             composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
         end
@@ -150,6 +162,8 @@ function scene:create( event )
     sceneGroup:insert( star3 )
     sceneGroup:insert( star2 )
     sceneGroup:insert( star1 )
+    sceneGroup:insert( startext1 )
+    sceneGroup:insert( startext2 )
 
 
 
