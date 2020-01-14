@@ -54,18 +54,24 @@ local function BackTransition( )
 end
 
 local function clickchef(touch)
-    chef1 = true
-    if (level2done == false) then
-        composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-    else
-        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
+    if (stars >= 3) then
+        chef1 = true
+        stars = stars - 3
+        if (level2done == false) then
+            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
+        else
+            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
+        end
     end
 end
 
 local function clickcashier(touch)
-    Cashier1 = true
-    if (level2done == false) then
-        composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
+    if (stars >= 6) then
+        Cashier1 = true
+        stars = stars - 6
+        if (level2done == false) then
+            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
+        end
     end
 end
 -----------------------------------------------------------------------------------------
@@ -104,9 +110,17 @@ function scene:create( event )
     lock1.x = 120
     lock1.y = 400
 
+    lock2 = display.newImageRect("Images/lock.png", 200, 200) 
+    lock2.x = 360
+    lock2.y = 400
+
     startext1 = display.newText("3", 200, 200, Arial, 35) 
     startext1.x = 100
     startext1.y = 400 
+
+    startext2 = display.newText("6", 200, 200, Arial, 35) 
+    startext2.x = 340
+    startext2.y = 400 
 
     star1 = display.newImage("Images/star1.png")
     star1.x = 140
@@ -115,10 +129,10 @@ function scene:create( event )
     star1.height = 35
 
     star2 = display.newImage("Images/star2.png")
-    star2.x = display.contentWidth/2
-    star2.y = 450
-    star2.width = 200
-    star2.height = 200
+    star2.x = 380
+    star2.y = 400
+    star2.width = 35
+    star2.height = 35
 
     star3 = display.newImage("Images/star3.png")
     star3.x = display.contentWidth*6/8
@@ -132,6 +146,7 @@ function scene:create( event )
     sceneGroup:insert( chef )
     sceneGroup:insert( bkg )
     sceneGroup:insert(lock1)
+    sceneGroup:insert( lock2 )
     sceneGroup:insert( star3 )
     sceneGroup:insert( star2 )
     sceneGroup:insert( star1 )
