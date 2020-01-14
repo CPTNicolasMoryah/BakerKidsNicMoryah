@@ -10,7 +10,6 @@
 ----------------------------------------------------------------------------------------
 --GLOBAL VARIABLES
 ----------------------------------------------------------------------------------------
-stars = 0
 
 -----------------------------------------------------------------------------------------
 
@@ -20,6 +19,51 @@ local composer = require( "composer" )
 -----------------------------------------------------------------------------------------
 
 -- Go to the intro screen
+function UpdateStars()
+
+-- Get path for file "data.txt" in the documents directory
+path = system.pathForFile( "coinsFile.txt", system.DocumentsDirectory )
+ 
+-- Open the file from the path
+file, reason = io.open( path, "r" )
+ 
+if file then
+	print ("***File exists")
+    -- File exists; read its contents into a string
+    local starsAsString = file:read( "*a" )
+    print( "Contents of " .. path .. "\n" .. starsAsString )
+
+
+    stars = tonumber(starsAsString)
+
+
+    print ("***New stars = " .. stars)
+
+     
+else
+	print ("***File does not exist")
+    -- File open failed; output the reason
+    print( "File open failed: " .. reason )
+ 
+    -- Create file since it doesn't exist yet
+    file = io.open( path, "w" )
+    stars = 0
+ 
+    if file then
+        print( "Created file" )
+    else
+        print( "Create file failed!" )
+    end
+ 
+    file:write( stars .. "")
+
+ end
+  
+io.close( file )
+
+end
+
+UpdateStars()
 
 --composer.gotoScene( "level3_screen" )
 
@@ -39,60 +83,4 @@ composer.gotoScene( "main_menu" )
 
 --------------
 
---print ("system.DocumentsDirectory = " .. system.DocumentsDirectory)
-starsAsString = stars .. ""
-
---[[
--- Path for the file to write
-path = system.pathForFile( "coinsFile.txt", system.DocumentsDirectory )
-
-file, errorString = io.open( path, "w" )
-if not file then
-    -- Error occurred; output the cause
-    print( "File error: " .. errorString )
-else
-    -- Write data to file
-    file:write( starsAsString )
-    -- Close the file handle
-    io.close( file )
-end
- 
-file = nil
-
-]]--
-
--- Get path for file "data.txt" in the documents directory
-path = system.pathForFile( "coinsFile.txt", system.DocumentsDirectory )
- 
--- Open the file from the path
-file, reason = io.open( path, "r" )
- 
-if file then
-    -- File exists; read its contents into a string
-    local contents = file:read( "*a" )
-    print( "Contents of " .. path .. "\n" .. contents )
-
-    stars = tonumber(contents)
-
-    print ("***New stars = " .. stars)
-
-     
-else
-    -- File open failed; output the reason
-    print( "File open failed: " .. reason )
- 
-    -- Create file since it doesn't exist yet
-    file = io.open( path, "w" )
- 
-    if file then
-        print( "Created file" )
-    else
-        print( "Create file failed!" )
-    end
- 
-    file:write( stars .. "")
-
- end
-  
-io.close( file )
 --composer.gotoScene( "characterselectscreen" )
