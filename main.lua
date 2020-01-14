@@ -95,3 +95,4 @@ else
  end
   
 io.close( file )
+--composer.gotoScene( "characterselectscreen" )
