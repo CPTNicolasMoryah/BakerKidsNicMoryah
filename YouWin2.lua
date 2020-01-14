@@ -33,6 +33,9 @@ local bkg
 local level2button
 local mainmenu
 local nextlevel
+local star1
+local star2
+local star3
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -42,11 +45,27 @@ local function Level2ScreenTransition( )
 end 
 local function mainmenuTransition()
     composer.removeScene("level2_screen")
-    composer.gotoScene( "main_menu" )
+    composer.gotoScene( "main_menu2" )
 end
 local function level3screentransition( )
     composer.removeScene("level2_screen")
     composer.gotoScene( "level_select2", {effect = "slideLeft", time = 1000})
+end
+
+local function giveStars( )
+    if (lives == 3) then
+        star3.isVisible = true
+        star2.isVisible = true
+        star1.isVisible = true
+        stars = stars + 3
+    elseif (lives == 2) then
+        star2.isVisible = true
+        star1.isVisible = true
+        stars = stars + 2
+    else
+        star1.isVisible = true
+        stars = stars + 1
+    end
 end
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -65,10 +84,34 @@ function scene:create( event )
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
     bkg.height = display.contentHeight
+
+    star1 = display.newImage("Images/star1.png")
+    star1.x = display.contentWidth/4
+    star1.y = 450
+    star1.width = 200
+    star1.height = 200
+    star1.isVisible = false
+
+    star2 = display.newImage("Images/star2.png")
+    star2.x = display.contentWidth/2
+    star2.y = 450
+    star2.width = 200
+    star2.height = 200
+    star2.isVisible = false
+
+    star3 = display.newImage("Images/star3.png")
+    star3.x = display.contentWidth*6/8
+    star3.y = 450
+    star3.width = 200
+    star3.height = 200
+    star3.isVisible = false
     -----------------------------------------------------------------------------------------     
 
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg )
+    sceneGroup:insert( star3 )
+    sceneGroup:insert( star2 )
+    sceneGroup:insert( star1 )
     ----------------------------------------------------------------------------------------
 --BUTTONS AND WIDGETS
 ---------------------------------------------------------------------------------------
@@ -139,7 +182,7 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
-
+        giveStars()
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.

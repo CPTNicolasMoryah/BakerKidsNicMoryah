@@ -6,7 +6,6 @@
 -- Date: dec. ??, 2019
 -- Description: This is the level 3 screen of the game.
 -----------------------------------------------------------------------------------------
-
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
 -----------------------------------------------------------------------------------------
@@ -35,7 +34,6 @@ local countDownTimer
 local clockText
 local points = 0
 local pointsText
-local lives = 3
 
 local questionObject
 
@@ -480,6 +478,7 @@ function scene:hide( event )
     -------------------------------------------------------------------------------------
 
     if ( phase == "will" ) then
+        lives = 3
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
