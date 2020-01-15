@@ -14,7 +14,7 @@
 
 -- Use composer library
 local composer = require( "composer" )
-
+local starconstnt = 0
 -----------------------------------------------------------------------------------------
 
 -- Go to the intro screen
@@ -31,14 +31,14 @@ function UpdateStars()
         -- File exists; read its contents into a string
         starsAsString = file:read( "*a" )
         print( "Contents of " .. path .. "\n" .. starsAsString )
-        if (stars == nil) then
-        stars = 0
-        print ("***New stars = " .. stars)
+        if starsAsString then
+        	starsAsString = ""..starconstnt
+        	stars = tonumber(starsAsString)
+        	print ("***New star created = " .. stars)
     	end
     		stars = tonumber(starsAsString)
     
     
-        	print ("***New stars = " .. stars)
          
     else
     	print ("***File does not exist")
