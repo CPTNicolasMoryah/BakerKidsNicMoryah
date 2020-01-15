@@ -268,16 +268,15 @@ function scene:show( event )
         bkgMusicChannel = audio.play(bkgMusic, {loops= -1})   
         muteButton:addEventListener("touch", Mute)
         unmuteButton:addEventListener("touch", Unmute)
+
         if ( SOUNDON == true ) then
             audio.resume(bkgMusicChannel)
             unmuteButton.isVisible = true
             muteButton.isVisible = false
-
         else
             audio.pause(bkgMusicChannel)
             unmuteButton.isVisible = false
             muteButton.isVisible = true
-
         end
         
     end
