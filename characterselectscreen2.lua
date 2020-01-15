@@ -59,6 +59,30 @@ local waitress
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
+local function checkifvisible(  )
+    if (characters >= 1) or (chef1 == true) then
+        lock1.isVisible = false
+        startext1.isVisible = false
+        star1.isVisible = false
+    end
+    if (character2 >= 1) or (Cashier1 == true ) then
+        lock2.isVisible = false
+        startext2.isVisible = false
+        star2.isVisible = false
+    end
+    if (character3 >= 1) or (securityGuard1 == true) then
+        lock3.isVisible = false
+        startext3.isVisible = false
+        star3.isVisible = false
+    end
+    if (character4 >= 1) or (waitress1 == true) then
+        lock4.isVisible = false
+        startext4.isVisible = false
+        star4.isVisible = false
+    end
+end
+
+
 local function displaystars()
     starstext.text = "= "..stars
 end
@@ -371,6 +395,7 @@ function scene:show( event )
         -- Called when the scene is still off screen (but is about to come on screen).
         displaystars()
         checkifpaid()
+        checkifvisible()
         if (characters == 1) then
             lock1.isVisible = false
             startext1.isVisible = false
