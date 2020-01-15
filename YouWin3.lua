@@ -58,7 +58,7 @@ local function giveStars( )
         star1.isVisible = true
         stars = stars + 3
         file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file:write( stars.."" )
         print ("***New stars = " .. stars)
         io.close( file )
     elseif (lives == 2) then
@@ -66,14 +66,14 @@ local function giveStars( )
         star1.isVisible = true
         stars = stars + 2
         file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file:write( stars.."")
         print ("***New stars = " .. stars)
         io.close( file )
     else
         star1.isVisible = true
         stars = stars + 1
         file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file:write( stars.."" )
         print ("***New stars = " .. stars)
         io.close( file )
     end
@@ -219,7 +219,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then

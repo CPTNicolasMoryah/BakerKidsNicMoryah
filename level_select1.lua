@@ -265,6 +265,7 @@ function scene:hide( event )
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
         audio.stop(bkgMusicChannel)
+        UpdateStars()
 
     -----------------------------------------------------------------------------------------
 

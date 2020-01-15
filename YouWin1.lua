@@ -59,23 +59,23 @@ local function giveStars( )
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 3
-        file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
         print ("***New stars = " .. stars)
         io.close( file )
     elseif (lives == 2) then
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 2
-        file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
         print ("***New stars = " .. stars)
         io.close( file )
     else
         star1.isVisible = true
         stars = stars + 1
-        file, errorString = io.open( path, "w" )
-        file:write( starsAsString )
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
         print ("***New stars = " .. stars)
         io.close( file )
     end
@@ -231,6 +231,7 @@ function scene:hide( event )
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
         audio.stop(wonSoundChannel)
+        UpdateStars()
     end
 
 end

@@ -419,6 +419,28 @@ function scene:create( event )
         Cashier.isVisible = false
     end
 
+    securityGuard = display.newImageRect( "Images/security guard.png", 0,0 )
+    securityGuard.height = 350
+    securityGuard.width = 100
+    securityGuard.x = 50
+    securityGuard.y = 550
+    if (securityGuard1 == true) then
+        securityGuard.isVisible = true
+    else
+        securityGuard.isVisible = false
+    end
+
+    waitress = display.newImageRect( "Images/waitress.png", 0,0 )
+    waitress.height = 350
+    waitress.width = 100
+    waitress.x = 50
+    waitress.y = 550
+    if (waitress1 == true) then
+        waitress.isVisible = true
+    else
+        waitress.isVisible = false
+    end
+
     cashoverlay = display.newImageRect( "Images/Level1ScreenMoryah1.png",0,0)
     cashoverlay.anchorX = 0
     cashoverlay.anchorY = 1536
@@ -461,6 +483,8 @@ function scene:create( event )
     sceneGroup:insert( questionObject )
     sceneGroup:insert( chefimage )
     sceneGroup:insert( Cashier )
+    sceneGroup:insert( securityGuard )
+    sceneGroup:insert( waitress )
     sceneGroup:insert( cashoverlay )
 
 end --function scene:create( event )
@@ -521,6 +545,7 @@ function scene:hide( event )
         textField:removeEventListener( "userInput", textFieldListener)
         textField.isVisible = false
         audio.stop(level2SoundChannel)
+        UpdateStars()
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.

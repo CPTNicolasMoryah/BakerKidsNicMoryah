@@ -1,9 +1,9 @@
-  
 -----------------------------------------------------------------------------------------
 --
--- instructions
--- Created by: Nic R
--- Date: Nov, 20, 2019
+-- credits_screen.lua
+-- Created by: Your Name
+-- Special thanks to Wal Wal for helping in the design of this framework.
+-- Date: Month Day, Year
 -- Description: This is the credits page, displaying a back button to the main menu.
 -----------------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "instructions"
+sceneName = "credits_screen2"
 
 -- Creating Scene Object
 scene = composer.newScene( sceneName ) -- This function doesn't accept a string, only a variable containing a string
@@ -35,7 +35,7 @@ local backButton
 
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
-    composer.gotoScene( "main_menu", {effect = "fromRight", time = 500})
+    composer.gotoScene( "main_menu2", {effect = "fromLeft", time = 800})
 end
 
 
@@ -54,14 +54,14 @@ function scene:create( event )
     -----------------------------------------------------------------------------------------
 
     -- Insert the background image and set it to the center of the screen
-    bkg = display.newImageRect("Images/InstructionsScreenMoryah.png", display.contentWidth, display.contentHeight)
-    bkg.x = display.contentCenterX
-    bkg.y = display.contentCenterY
-    bkg.width = display.contentWidth
-    bkg.height = display.contentHeight
+    bkg_image = display.newImageRect("Images/CreditsScreenNicR.jpg", display.contentWidth, display.contentHeight)
+    bkg_image.x = display.contentCenterX
+    bkg_image.y = display.contentCenterY
+    bkg_image.width = display.contentWidth
+    bkg_image.height = display.contentHeight
 
     -- Associating display objects with this scene 
-    sceneGroup:insert( bkg )
+    sceneGroup:insert( bkg_image )
 
     -----------------------------------------------------------------------------------------
     -- BUTTON WIDGETS
@@ -88,11 +88,13 @@ function scene:create( event )
     } )
 
     -----------------------------------------------------------------------------------------
-
+    --set the size of the button
+    backButton:scale(0.7,0.7)
+    
     -- Associating Buttons with this scene
     sceneGroup:insert( backButton )
-     --set the size of the button
-    backButton:scale(0.7,0.7)
+    
+    
 end --function scene:create( event )
 
 -----------------------------------------------------------------------------------------
@@ -179,3 +181,5 @@ scene:addEventListener( "destroy", scene )
 -----------------------------------------------------------------------------------------
 
 return scene
+
+

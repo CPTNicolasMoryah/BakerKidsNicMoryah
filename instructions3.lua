@@ -18,7 +18,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "instructions2"
+sceneName = "instructions3"
 
 -- Creating Scene Object
 scene = composer.newScene( sceneName ) -- This function doesn't accept a string, only a variable containing a string
@@ -36,7 +36,7 @@ local backButton
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
     pauseinstructions = true
-    composer.gotoScene( "level4_screen", {effect = "fromRight", time = 500})
+    composer.gotoScene( "main_menu2", {effect = "fromRight", time = 500})
 end
 
 
@@ -141,7 +141,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then

@@ -122,6 +122,12 @@ local SugarComplete = false
 
 local totalIngredients = 0
 
+local chefimage
+local Cashier
+local securityGuard
+local waitress
+local cashoverlay
+
 -----------------------------------------------------------------------------------------
 -- SOUNDS
 -----------------------------------------------------------------------------------------
@@ -1375,6 +1381,58 @@ local function create(  )
     SugarImage.x = math.random(50, display.contentWidth)
     SugarImage.y = math.random(160, display.contentHeight*330/512)
     SugarImage.isVisible = false
+
+    chefimage = display.newImageRect("Images/chef.png", 200, 200)
+    chefimage.height = 350
+    chefimage.width = 170
+    chefimage.x = 170
+    chefimage.y = 550
+    if (chef1 == true) then
+        chefimage.isVisible = true
+    else
+        chefimage.isVisible = false
+    end
+
+    Cashier = display.newImageRect( "Images/cashier.png", 0,0 )
+    Cashier.height = 350
+    Cashier.width = 170
+    Cashier.x = 170
+    Cashier.y = 550
+    if (Cashier1 == true) then
+        Cashier.isVisible = true
+    else
+        Cashier.isVisible = false
+    end
+
+    securityGuard = display.newImageRect( "Images/security guard.png", 0,0 )
+    securityGuard.height = 350
+    securityGuard.width = 170
+    securityGuard.x = 170
+    securityGuard.y = 550
+    if (securityGuard1 == true) then
+        securityGuard.isVisible = true
+    else
+        securityGuard.isVisible = false
+    end
+
+    waitress = display.newImageRect( "Images/waitress.png", 0,0 )
+    waitress.height = 350
+    waitress.width = 100
+    waitress.x = 170
+    waitress.y = 550
+    if (waitress1 == true) then
+        waitress.isVisible = true
+    else
+        waitress.isVisible = false
+    end
+
+    cashoverlay = display.newImageRect( "Images/level2overlay.png",0,0)
+    cashoverlay.anchorX = 0
+    cashoverlay.anchorY = 1536
+    cashoverlay.x = 0
+    cashoverlay.y = 840
+    cashoverlay.height = 325
+    cashoverlay.width = 320
     
 
 end
@@ -1443,6 +1501,12 @@ function scene:create( event )
     sceneGroup:insert(MilkImage)
     sceneGroup:insert(SaltImage)
     sceneGroup:insert(SugarImage)
+    sceneGroup:insert( chefimage )
+    sceneGroup:insert( Cashier )
+    sceneGroup:insert( securityGuard )
+    sceneGroup:insert( waitress )
+    sceneGroup:insert( cashoverlay )
+
 
 end 
  --function scene:create( event )
@@ -1497,6 +1561,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then

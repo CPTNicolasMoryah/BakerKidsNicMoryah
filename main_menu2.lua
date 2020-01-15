@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------------------
 --GLOBAL VARIABLES
 ---------------------------------------------------------------------------------------
-level2done = true
+level2done = false
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
 -----------------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ end
 
 -- Creating Transition Function to Credits Page
 local function CreditsTransition( )       
-    composer.gotoScene( "credits_screen", {effect = "crossFade", time = 500})
+    composer.gotoScene( "credits_screen2", {effect = "crossFade", time = 500})
 end 
 
 -----------------------------------------------------------------------------------------
@@ -102,11 +102,11 @@ end
 
 -- INSERT LOCAL FUNCTION DEFINITION THAT GOES TO INSTRUCTIONS SCREEN 
 local function InstructionsTransition( )
-    composer.gotoScene("instructions", {effect = "crossFade", time = 500})
+    composer.gotoScene("instructions3", {effect = "crossFade", time = 500})
 end
 
 local function characterscreentransition( )
-    composer.gotoScene("characterselectscreen", {effect = "crossFade", time = 500})
+    composer.gotoScene("characterselectscreen2", {effect = "crossFade", time = 500})
 end
 
 local function displaystars()
@@ -315,6 +315,7 @@ function scene:hide( event )
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
         audio.stop(bkgMusicChannel)
+        UpdateStars()
 
     -----------------------------------------------------------------------------------------
 

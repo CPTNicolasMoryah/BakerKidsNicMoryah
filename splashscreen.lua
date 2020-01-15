@@ -149,7 +149,7 @@ function scene:hide( event )
         -- Adding Event Listeners
         Runtime:removeEventListener("enterFrame", opendoors)
         Runtime:removeEventListener("enterFrame", changescale)
-     
+        UpdateStars()
     end
 
 end --function scene:hide( event )

@@ -24,7 +24,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "characterselectscreen"
+sceneName = "characterselectscreen2"
 
 -- Creating Scene Object
 scene = composer.newScene( sceneName ) -- This function doesn't accept a string, only a variable containing a string
@@ -65,7 +65,7 @@ end
 
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
-    composer.gotoScene( "main_menu", {effect = "fromRight", time = 500})
+    composer.gotoScene( "main_menu2", {effect = "fromRight", time = 500})
 end
 
 local function hideText(  )
@@ -90,18 +90,10 @@ local function clickchef(touch)
 
         displaystars()
         checkifpaid()
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     elseif (chef1 == true) or (characters >= 1) then
         chef1 = true
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     else
         getmoretext.isVisible = true
         timer.performWithDelay(2000, hideText)
@@ -125,18 +117,10 @@ local function clickcashier(touch)
 
         checkifpaid()
         displaystars()
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-             composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     elseif (Cashier1 == true) or (character2 >= 1) then
         Cashier1 = true
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     else
         getmoretext.isVisible = true
         timer.performWithDelay(2000, hideText)
@@ -161,18 +145,10 @@ local function clicksecurityguard(touch)
 
         checkifpaid()
         displaystars()
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     elseif (securityGuard1 == true) or (character3 >= 1) then
         securityGuard1 = true
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     else
         getmoretext.isVisible = true
         timer.performWithDelay(2000, hideText)
@@ -197,18 +173,10 @@ local function clickwaitress(touch)
 
         checkifpaid()
         displaystars()
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     elseif (waitress1 == true) or (character4 >= 1) then
         waitress1 = true
-        if (level2done == false) then
-            composer.gotoScene( "level_select1", {effect = "fromRight", time = 500} )
-        else
-            composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
-        end
+        composer.gotoScene( "level_select2", {effect = "fromRight", time = 500} )
     else
         getmoretext.isVisible = true
         timer.performWithDelay(2000, hideText)

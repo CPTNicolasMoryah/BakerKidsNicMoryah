@@ -233,7 +233,7 @@ function scene:hide( event )
         -- Example: stop timers, stop animation, stop audio, etc.
         volumeButton:removeEventListener("touch", pauseMusic ) 
         muteVolumeButton:removeEventListener("touch", playMusic )
-
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
