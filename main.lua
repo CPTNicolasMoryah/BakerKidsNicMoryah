@@ -34,12 +34,11 @@ function UpdateStars()
         if (stars == nil) then
         stars = 0
         print ("***New stars = " .. stars)
-    	elseif (starsAsString ~= nil) then
+    	end
     		stars = tonumber(starsAsString)
     
     
         	print ("***New stars = " .. stars)
-    	end
          
     else
     	print ("***File does not exist")
