@@ -109,6 +109,9 @@ local function characterscreentransition( )
     composer.gotoScene("characterselectscreen", {effect = "crossFade", time = 500})
 end
 
+local function displaystars()
+    starstext.text = "= "..stars
+end
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -131,7 +134,14 @@ function scene:create( event )
     bkg_image.width = display.contentWidth
     bkg_image.height = display.contentHeight
 
+    starstext = display.newText("= 0",575,110, nil, 50)
+    starstext:setTextColor(0,0,0)
 
+    star1 = display.newImage("Images/star1.png")
+    star1.x = 450
+    star1.y = 110
+    star1.width = 100
+    star1.height = 100
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg_image )
 
@@ -235,6 +245,8 @@ function scene:create( event )
     sceneGroup:insert( unmuteButton )
     sceneGroup:insert( muteButton )
     sceneGroup:insert( characterscreenButton )
+    sceneGroup:insert( starstext )
+    sceneGroup:insert( star1 )
     
 
 end -- function scene:create( event )   
@@ -257,7 +269,7 @@ function scene:show( event )
     if ( phase == "will" ) then
 
         -- The function that will go to the main menu 
-
+        displaystars()
     -----------------------------------------------------------------------------------------
 
     -- Called when the scene is now on screen.
@@ -302,6 +314,7 @@ function scene:hide( event )
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
         audio.stop(bkgMusicChannel)
+        UpdateStars()
 
     -----------------------------------------------------------------------------------------
 

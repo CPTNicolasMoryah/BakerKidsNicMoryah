@@ -6,7 +6,6 @@
 -- Date: dec. ??, 2019
 -- Description: This is the level 3 screen of the game.
 -----------------------------------------------------------------------------------------
-
 -----------------------------------------------------------------------------------------
 -- INITIALIZATIONS
 -----------------------------------------------------------------------------------------
@@ -35,7 +34,6 @@ local countDownTimer
 local clockText
 local points = 0
 local pointsText
-local lives = 3
 
 local questionObject
 
@@ -59,6 +57,12 @@ local incorrectSoundChannel
 
 local loseSound = audio.loadSound("Sounds/lose.mp3")
 local loseSoundChannel
+
+local chefimage
+local Cashier
+local securityGuard
+local waitress
+local cashoverlay
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL VARIABLES
@@ -415,6 +419,57 @@ function scene:create( event )
         onRelease = BackTransition
      } )
 
+    chefimage = display.newImageRect("Images/chef.png", 200, 200)
+    chefimage.height = 350
+    chefimage.width = 170
+    chefimage.x = 50
+    chefimage.y = 550
+    if (chef1 == true) then
+        chefimage.isVisible = true
+    else
+        chefimage.isVisible = false
+    end
+
+    Cashier = display.newImageRect( "Images/cashier.png", 0,0 )
+    Cashier.height = 350
+    Cashier.width = 170
+    Cashier.x = 50
+    Cashier.y = 550
+    if (Cashier1 == true) then
+        Cashier.isVisible = true
+    else
+        Cashier.isVisible = false
+    end
+
+    securityGuard = display.newImageRect( "Images/security guard.png", 0,0 )
+    securityGuard.height = 350
+    securityGuard.width = 170
+    securityGuard.x = 50
+    securityGuard.y = 550
+    if (securityGuard1 == true) then
+        securityGuard.isVisible = true
+    else
+        securityGuard.isVisible = false
+    end
+
+    waitress = display.newImageRect( "Images/waitress.png", 0,0 )
+    waitress.height = 350
+    waitress.width = 100
+    waitress.x = 50
+    waitress.y = 550
+    if (waitress1 == true) then
+        waitress.isVisible = true
+    else
+        waitress.isVisible = false
+    end
+
+    cashoverlay = display.newImageRect( "Images/level3overlay.png",0,0)
+    cashoverlay.anchorX = 0
+    cashoverlay.anchorY = 1536
+    cashoverlay.x = 1
+    cashoverlay.y = 840
+    cashoverlay.height = 398
+    cashoverlay.width = 320
 -----------------------------------------------------------------------------------------
 -- Insert images into the scene group in order to ONLY be associated with this scene
     sceneGroup:insert( bkg_image ) 
@@ -428,6 +483,11 @@ function scene:create( event )
     sceneGroup:insert( correctObject )
     sceneGroup:insert( incorrectObject )
     sceneGroup:insert( questionObject )
+    sceneGroup:insert( Cashier )
+    sceneGroup:insert( securityGuard )
+    sceneGroup:insert( waitress )
+    sceneGroup:insert( cashoverlay )
+
 
 end --function scene:create( event )
 
@@ -485,6 +545,7 @@ function scene:hide( event )
         -- Example: stop timers, stop animation, stop audio, etc.
 
         level2done = true
+        UpdateStars()
 
     -------------------------------------------------------------------------------------
         textField:removeEventListener( "userInput", textFieldListener)

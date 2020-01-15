@@ -33,6 +33,9 @@ local bkg
 local level2button
 local mainmenu
 local nextlevel
+local star1
+local star2
+local star3
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -44,10 +47,37 @@ local function mainmenuTransition()
     composer.removeScene("level3_screen")
    composer.gotoScene( "main_menu" )
 end
---local function level4screentransition( )
---    composer.removeScene("level3_screen")
---    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
---end
+local function level4screentransition( )
+    composer.removeScene("level3_screen")
+    composer.gotoScene( "level4_screen", {effect = "slideLeft", time = 1000})
+end
+local function giveStars( )
+    if (lives == 3) then
+        star3.isVisible = true
+        star2.isVisible = true
+        star1.isVisible = true
+        stars = stars + 3
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
+    elseif (lives == 2) then
+        star2.isVisible = true
+        star1.isVisible = true
+        stars = stars + 2
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."")
+        print ("***New stars = " .. stars)
+        io.close( file )
+    else
+        star1.isVisible = true
+        stars = stars + 1
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
+    end
+end
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
@@ -65,10 +95,34 @@ function scene:create( event )
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
     bkg.height = display.contentHeight
+
+    star1 = display.newImage("Images/star1.png")
+    star1.x = display.contentWidth/4
+    star1.y = 450
+    star1.width = 200
+    star1.height = 200
+    star1.isVisible = false
+
+    star2 = display.newImage("Images/star2.png")
+    star2.x = display.contentWidth/2
+    star2.y = 450
+    star2.width = 200
+    star2.height = 200
+    star2.isVisible = false
+
+    star3 = display.newImage("Images/star3.png")
+    star3.x = display.contentWidth*6/8
+    star3.y = 450
+    star3.width = 200
+    star3.height = 200
+    star3.isVisible = false
     -----------------------------------------------------------------------------------------     
 
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg )
+    sceneGroup:insert( star3 )
+    sceneGroup:insert( star2 )
+    sceneGroup:insert( star1 )
     ----------------------------------------------------------------------------------------
 --BUTTONS AND WIDGETS
 ---------------------------------------------------------------------------------------
@@ -100,23 +154,23 @@ function scene:create( event )
             -- When the button is released, call the Level1 screen transition function
             onRelease = mainmenuTransition          
         } )
-   -- nextlevel = widget.newButton( 
-   --     {   
-   --         -- Set its position on the screen relative to the screen size
-   --         x = display.contentWidth*6/8,
-   --         y = display.contentHeight*7/8,
-   --         
---
-   --         -- Insert the images here
-   --         defaultFile = "Images/next levelWon.png",
-   --         overFile = "Images/next levelLost.png",
---
-   --         -- When the button is released, call the Level1 screen transition function
-   --         onRelease = level4screentransition          
-   --     } )
+    nextlevel = widget.newButton( 
+        {   
+            -- Set its position on the screen relative to the screen size
+            x = display.contentWidth*6/8,
+            y = display.contentHeight*7/8,
+            
+
+            -- Insert the images here
+            defaultFile = "Images/next levelWon.png",
+            overFile = "Images/next levelLost.png",
+
+            -- When the button is released, call the Level1 screen transition function
+            onRelease = level4screentransition          
+        } )
     sceneGroup:insert( level2button )
     sceneGroup:insert( mainmenu ) 
-    --sceneGroup:insert( nextlevel )
+    sceneGroup:insert( nextlevel )
 end
 
 -----------------------------------------------------------------------------------------
@@ -135,7 +189,7 @@ function scene:show( event )
 
     if ( phase == "will" ) then
         -- Called when the scene is still off screen (but is about to come on screen).
-
+        giveStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
@@ -165,7 +219,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
