@@ -34,12 +34,11 @@ function UpdateStars()
         if (stars == nil) then
         stars = 0
         print ("***New stars = " .. stars)
-    	elseif (starsAsString ~= nil) then
+    	end
     		stars = tonumber(starsAsString)
     
     
         	print ("***New stars = " .. stars)
-    	end
          
     else
     	print ("***File does not exist")
@@ -250,7 +249,7 @@ composer.gotoScene( "splashscreen" )
 --composer.gotoScene( "YouLose" )
 --composer.gotoScene( "YouWin2" )
 --composer.gotoScene( "PauseScreen" )
-composer.gotoScene( "main_menu" )
+--omposer.gotoScene( "main_menu" )
 --composer.gotoScene( "main_menu2" )
 --composer.gotoScene( "instructions" )
 --composer.gotoScene( "credits_screen" )

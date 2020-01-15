@@ -42,8 +42,8 @@ local function changescale(event)
     scale=scale+0.01
 end
 local function opendoors(event)
-    frenchdoor1.width=frenchdoor1.width-scale
-    frenchdoor2.width=frenchdoor2.width-scale
+    frenchdoor1.width = frenchdoor1.width-scale
+    frenchdoor2.width = frenchdoor2.width-scale
 end
 
 -- The function that will go to the main menu 
@@ -61,14 +61,14 @@ function scene:create( event )
     local sceneGroup = self.view
 
     -- set the background to be black
-    bkg = display.newImageRect("Images/goldenrays.jpg", 2048/2, 1536/2)
+    bkg = display.newImageRect("Images/goldenrays.jpg", display.contentWidth, display.contentHeight)
     --anchor the background
     bkg.anchorX=0
     bkg.anchorY=0
     sceneGroup:insert(bkg)
 
     -- Insert the frenchdoor1 image
-    frenchdoor1 = display.newImageRect("Images/CompanyLogoNicR.png", 2048/2, 1536/2)
+    frenchdoor1 = display.newImageRect("Images/CompanyLogoNicR.png", display.contentWidth/2, display.contentHeight)
     -- anchor Y
     frenchdoor1.anchorY=0
     frenchdoor1.anchorX=0
@@ -78,12 +78,12 @@ function scene:create( event )
     sceneGroup:insert( frenchdoor1 )
 
     -- Insert the frenchdoor2 image
-    frenchdoor2 = display.newImageRect("Images/CompanyLogoNicR2.png", 0,1536/2)
+    frenchdoor2 = display.newImageRect("Images/CompanyLogoNicR2.png", 0 ,display.contentHeight)
     -- anchor the Y to be 0
     frenchdoor2.anchorY=0
     frenchdoor2.anchorX=1
     --set the initial x and y
-    frenchdoor2.x=2045/2
+    frenchdoor2.x = display.contentWidth
     --set the width to be half of the contentWidth
     frenchdoor2.width=display.contentWidth/2
     -- Insert objects into the scene group in order to ONLY be associated with this scene
