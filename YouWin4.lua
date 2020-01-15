@@ -151,7 +151,6 @@ function scene:create( event )
         } )
     sceneGroup:insert( level2button )
     sceneGroup:insert( mainmenu ) 
-    sceneGroup:insert( nextlevel )
 end
 
 -----------------------------------------------------------------------------------------

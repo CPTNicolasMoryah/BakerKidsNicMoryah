@@ -96,8 +96,8 @@ local ANSWERSALT = "t"
 local ANSWERSUGAR = "r"
 local ANSWERSUGAR1 = "u"
 
-local CAPITALANSWERChocolateChips1 = "G"
-local CAPITOLANSWERChocolateChips2 = "R"
+local CAPITALANSWERChocolateChips1 = "O"
+local CAPITOLANSWERChocolateChips2 = "A"
 local CAPITOLANSWERChocolateChips3 = "I"
 local CAPITOLANSWERBAKINGSODA1 = "G" 
 local CAPITOLANSWERBAKINGSODA2 = "A"
@@ -773,8 +773,8 @@ local function PlaceChocolateChips()
 end
 
 local function ChocolateChips1Q( event )
+    userAnswerChocolateChips1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerChocolateChips1 = tostring(event.target.text)
         if (userAnswerChocolateChips1 == ANSWERChocolateChips1) or (userAnswerChocolateChips1 == CAPITOLANSWERChocolateChips1) and (userAnswerChocolateChips2 == ANSWERChocolateChips2) or (userAnswerChocolateChips2 == CAPITALANSWERChocolateChips2) and (userAnswerChocolateChips3 == ANSWERChocolateChips3) or (userAnswerChocolateChips3 == CAPITALANSWERChocolateChips3) then
             if (userAnswerChocolateChips2 == nil) or (userAnswerChocolateChips3 == nil) then    
                 checkAnswers()
@@ -788,6 +788,7 @@ local function ChocolateChips1Q( event )
                 correctObject.isVisible = false
                 BakingSodaV = true
             else
+                print("***RIGHT")
                 ChocolateChips1TextField:removeEventListener("userInput", ChocolateChips1Q)
                 ChocolateChips2TextField:removeEventListener("userInput", ChocolateChips2Q)
                 ChocolateChips3TextField:removeEventListener("userInput", ChocolateChips3Q)
@@ -827,10 +828,11 @@ local function ChocolateChips1Q( event )
 end
 
 local function ChocolateChips2Q( event )
+    userAnswerChocolateChips2 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerChocolateChips2 = tostring(event.target.text)
         if (userAnswerChocolateChips1 == ANSWERChocolateChips1) or (userAnswerChocolateChips1 == CAPITOLANSWERChocolateChips1) and (userAnswerChocolateChips2 == ANSWERChocolateChips2) or (userAnswerChocolateChips2 == CAPITALANSWERChocolateChips2) and (userAnswerChocolateChips3 == ANSWERChocolateChips3) or (userAnswerChocolateChips3 == CAPITALANSWERChocolateChips3) then
             if (userAnswerChocolateChips1 == nil) or (userAnswerChocolateChips3 == nil) then 
+                print("***WRONG")
                 checkAnswers()
                 native.setKeyboardFocus( nil )
                 incorrectTextObject.isVisible = true
@@ -883,6 +885,7 @@ local function ChocolateChips3Q( event )
          userAnswerChocolateChips3 = tostring(event.target.text)
         if (userAnswerChocolateChips1 == ANSWERChocolateChips1) or (userAnswerChocolateChips1 == CAPITOLANSWERChocolateChips1) and (userAnswerChocolateChips2 == ANSWERChocolateChips2) or (userAnswerChocolateChips2 == CAPITALANSWERChocolateChips2) and (userAnswerChocolateChips3 == ANSWERChocolateChips3) or (userAnswerChocolateChips3 == CAPITALANSWERChocolateChips3) then
             if (userAnswerChocolateChips1 == nil) or (userAnswerChocolateChips2 == nil) then
+                print("***WRONG")
                 checkAnswers()
                 native.setKeyboardFocus( nil )
                 incorrectTextObject.isVisible = true
@@ -942,62 +945,9 @@ local function PlaceBakingSoda()
     BakingSodaImage.isVisible = true
 end
 
-local function BakingSoda2Q( event )
-    if(event.phase=="submitted")then
-        userAnswerBakingSoda2 = tostring(event.target.text)
-        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
-            if (userAnswerBakingSoda1 == nil) then
-                native.setKeyboardFocus( nil )
-                checkAnswers()
-                incorrectTextObject.isVisible = true
-                if (soundOn == true) then
-                    incorrectSoundChannel = audio.play(incorrectSound)
-                end
-                incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
-                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-                correctObject.isVisible = false
-                BakingSodaV = false
-                ButterV = true
-            else
-                native.setKeyboardFocus( nil )
-                BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
-                BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
-                correctObject.isVisible = true
-                if (soundOn == true) then
-                    correctSoundChannel = audio.play(correctSound)
-                end
-                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-                incorrectTextObject.isVisible = false
-                BakingSodaV = false
-                ButterV = true
-                BakingSoda1TextField.text = ""
-                BakingSoda2TextField.text = ""
-                BakingSoda1.isVisible = false
-                BakingSoda1TextField.isVisible = false
-                BakingSoda2.isVisible = false
-                BakingSoda2TextField.isVisible = false
-                PlaceBakingSoda()
-                BakingSodaImage:addEventListener("touch", DissapearBakingSoda)
-            end
-        else
-            native.setKeyboardFocus( nil )
-            checkAnswers()
-            incorrectTextObject.isVisible = true
-            if (soundOn == true) then
-                incorrectSoundChannel = audio.play(incorrectSound)
-            end
-            incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
-            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-            correctObject.isVisible = false
-            BakingSodaV = false
-            ButterV = true
-        end
-    end
-end
-
 local function BakingSoda1Q( event )
+    userAnswerBakingSoda1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerBakingSoda1 = tostring(event.target.text)
         if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
             if (userAnswerBakingSoda2 == nil) then
                 native.setKeyboardFocus( nil )
@@ -1048,6 +998,58 @@ local function BakingSoda1Q( event )
     end
 end
 
+local function BakingSoda2Q( event )
+    userAnswerBakingSoda2 = tostring(event.target.text)
+    if(event.phase=="submitted")then
+        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
+            if (userAnswerBakingSoda1 == nil) then
+                native.setKeyboardFocus( nil )
+                checkAnswers()
+                incorrectTextObject.isVisible = true
+                if (soundOn == true) then
+                    incorrectSoundChannel = audio.play(incorrectSound)
+                end
+                incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
+                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+                correctObject.isVisible = false
+                BakingSodaV = false
+                ButterV = true
+            else
+                native.setKeyboardFocus( nil )
+                BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
+                BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
+                correctObject.isVisible = true
+                if (soundOn == true) then
+                    correctSoundChannel = audio.play(correctSound)
+                end
+                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+                incorrectTextObject.isVisible = false
+                BakingSodaV = false
+                ButterV = true
+                BakingSoda1TextField.text = ""
+                BakingSoda2TextField.text = ""
+                BakingSoda1.isVisible = false
+                BakingSoda1TextField.isVisible = false
+                BakingSoda2.isVisible = false
+                BakingSoda2TextField.isVisible = false
+                PlaceBakingSoda()
+                BakingSodaImage:addEventListener("touch", DissapearBakingSoda)
+            end
+        else
+            native.setKeyboardFocus( nil )
+            checkAnswers()
+            incorrectTextObject.isVisible = true
+            if (soundOn == true) then
+                incorrectSoundChannel = audio.play(incorrectSound)
+            end
+            incorrectTextObject.text = ("That is incorrect.You Lose a life. Try again")
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            correctObject.isVisible = false
+            BakingSodaV = false
+            ButterV = true
+        end
+    end
+end
 
 local function PlaceButter()
     ButterComplete = true
@@ -1059,9 +1061,56 @@ local function PlaceButter()
     ButterImage.isVisible = true
 end
 
-local function ButterQ( event )
+local function Butter1Q( event )
+    userAnswerButter1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerButter = tostring(event.target.text)
+        if (userAnswerButter == ANSWERBUTTER) or (userAnswerButter == CAPITOLANSWERBUTTER) and (userAnswerButter1 == ANSWERBUTTER1) or (userAnswerButter1 == CAPITOLANSWERBUTTER1)  then
+            if (userAnswerButter == nil) then
+                checkAnswers()
+                native.setKeyboardFocus( nil )
+                incorrectTextObject.isVisible = true
+                if (soundOn == true) then
+                    incorrectSoundChannel = audio.play(incorrectSound)
+                end
+                incorrectTextObject.text = ("That is incorrect.You Lose a life")
+                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+                correctObject.isVisible = false
+                BakingSodaV = true
+            else
+                ButterTextField1:removeEventListener("userInput", Butter1Q)
+                ButterTextField:removeEventListener("userInput", ButterQ)
+                native.setKeyboardFocus( nil )
+                correctObject.isVisible = true
+                if (soundOn == true) then
+                    correctSoundChannel = audio.play(correctsound)
+                end
+                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+                incorrectTextObject.isVisible = false
+                ButterTextField1.text = ""
+                Butter.isVisible = false
+                ButterTextField1.isVisible = false
+                ButterTextField.isVisible = false          
+                PlaceButter()
+                ButterImage:addEventListener("touch", DissapearButter)
+            end
+        else
+            checkAnswers()
+            native.setKeyboardFocus( nil )
+            incorrectTextObject.isVisible = true
+            if (soundOn == true) then
+                incorrectSoundChannel = audio.play(incorrectSound)
+            end
+            incorrectTextObject.text = ("That is incorrect.You Lose a life")
+            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
+            correctObject.isVisible = false
+            BakingSodaV = true
+        end
+    end
+end
+
+local function ButterQ( event )
+    userAnswerButter = tostring(event.target.text)
+    if(event.phase=="submitted")then
         if (userAnswerButter == ANSWERBUTTER) or (userAnswerButter == CAPITOLANSWERBUTTER) and (userAnswerButter1 == ANSWERBUTTER1) or (userAnswerButter1 == CAPITOLANSWERBUTTER1) then
             if (userAnswerButter1 == nil) then
                 native.setKeyboardFocus( nil )
@@ -1112,54 +1161,6 @@ local function ButterQ( event )
     end
 end
 
-local function Butter1Q( event )
-   
-    if(event.phase=="submitted")then
-         userAnswerButter1 = tostring(event.target.text)
-        if (userAnswerButter == ANSWERBUTTER) or (userAnswerButter == CAPITOLANSWERBUTTER) and (userAnswerButter1 == ANSWERBUTTER1) or (userAnswerButter1 == CAPITOLANSWERBUTTER1)  then
-            if (userAnswerButter == nil) then
-                checkAnswers()
-                native.setKeyboardFocus( nil )
-                incorrectTextObject.isVisible = true
-                if (soundOn == true) then
-                    incorrectSoundChannel = audio.play(incorrectSound)
-                end
-                incorrectTextObject.text = ("That is incorrect.You Lose a life")
-                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-                correctObject.isVisible = false
-                BakingSodaV = true
-            else
-                ButterTextField1:removeEventListener("userInput", Butter1Q)
-                ButterTextField:removeEventListener("userInput", ButterQ)
-                native.setKeyboardFocus( nil )
-                correctObject.isVisible = true
-                if (soundOn == true) then
-                    correctSoundChannel = audio.play(correctsound)
-                end
-                timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-                incorrectTextObject.isVisible = false
-                ButterTextField1.text = ""
-                Butter.isVisible = false
-                ButterTextField1.isVisible = false
-                ButterTextField.isVisible = false          
-                PlaceButter()
-                ButterImage:addEventListener("touch", DissapearButter)
-            end
-        else
-            checkAnswers()
-            native.setKeyboardFocus( nil )
-            incorrectTextObject.isVisible = true
-            if (soundOn == true) then
-                incorrectSoundChannel = audio.play(incorrectSound)
-            end
-            incorrectTextObject.text = ("That is incorrect.You Lose a life")
-            timer.performWithDelay(2000,incorrectcorrectObjectinvisible)
-            correctObject.isVisible = false
-            BakingSodaV = true
-        end
-    end
-end
-
 local function PlaceEggs()
     EggsComplete = true
     EggsImage.x = math.random(100, display.contentWidth)
@@ -1171,8 +1172,8 @@ local function PlaceEggs()
 end
 
 local function EggsQ( event )
+    userAnswerEggs = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerEggs = tostring(event.target.text)
         if (userAnswerEggs == ANSWEREGGS)then
             native.setKeyboardFocus( nil )
             Eggs1TextField:removeEventListener("userInput", EggsQ)        
@@ -1217,9 +1218,10 @@ local function PlaceFlour()
 end
 
 local function FlourQ( event )
+    userAnswerFlour = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerFlour = tostring(event.target.text)
-        if (userAnswerFlour == ANSWERFLOUR) or (userAnswerFlour == CAPITOLANSWERFLOUR) and (userAnswerFlour1 == ANSWERFLOUR1)  or (userAnswerFlour1 == CAPITOLANSWERFLOUR1) then
+        print(""..ANSWERFLOUR1)
+        if (userAnswerFlour1 == ANSWERFLOUR) or (userAnswerFlour1 == CAPITOLANSWERFLOUR) and (userAnswerFlour == ANSWERFLOUR1)  or (userAnswerFlour == CAPITOLANSWERFLOUR1) then
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
             FlourTextField1:removeEventListener("userInput", FlourQ1)
@@ -1256,8 +1258,8 @@ local function FlourQ( event )
 end
 
 local function FlourQ1( event )
+    userAnswerFlour1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerFlour1 = tostring(event.target.text)
         if (userAnswerFlour == ANSWERFLOUR) or (userAnswerFlour == CAPITOLANSWERFLOUR) and (userAnswerFlour1 == ANSWERFLOUR1)  or (userAnswerFlour1 == CAPITOLANSWERFLOUR1) then
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
@@ -1306,8 +1308,8 @@ local function PlaceVanilla()
 end
 
 local function VanillaQ1( event )
+    userAnswerVanilla1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerVanilla1 = tostring(event.target.text)
         if (userAnswerVanilla == ANSWERVanilla)then
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
@@ -1344,8 +1346,8 @@ local function VanillaQ1( event )
 end
 
 local function VanillaQ( event )
+    userAnswerVanilla = tostring(event.target.text) 
     if (event.phase == "submitted") then 
-        userAnswerVanilla = tostring(event.target.text) 
         if (userAnswerVanilla == ANSWERVanilla1) or (userAnswerVanilla == CAPITOLANSWERVANILLA1) and (uswerAnswerVanilla1 == ANSWERVanilla) or (uswerAnswerVanilla1 == CAPITOLANSWERVANILLA) then
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
@@ -1391,8 +1393,8 @@ local function PlaceSalt()
 end
 
 local function SaltQ( event )
+    userAnswerSalt = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerSalt = tostring(event.target.text)
         if (userAnswerSalt == ANSWERSALT)then
             native.setKeyboardFocus( nil )
             SaltTextField:removeEventListener("userInput", SaltQ)
@@ -1437,8 +1439,8 @@ local function PlaceSugar()
 end
 
 local function SugarQ1( event )
+    userAnswerSugar1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerSugar1 = tostring(event.target.text)
         if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) then
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
@@ -1472,8 +1474,8 @@ local function SugarQ1( event )
 end
 
 local function SugarQ( event )
+    userAnswerSugar = tostring(event.target.text)
     if(event.phase=="submitted")then
-        userAnswerSugar = tostring(event.target.text)
         if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) then
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
@@ -1737,7 +1739,7 @@ local function create(  )
     SugarImage.y = math.random(160, display.contentHeight*330/512)
     SugarImage.isVisible = false
 
-        chefimage = display.newImageRect("Images/chef.png", 200, 200)
+    chefimage = display.newImageRect("Images/chef.png", 200, 200)
     chefimage.height = 350
     chefimage.width = 170
     chefimage.x = 200
