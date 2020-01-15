@@ -31,12 +31,15 @@ function UpdateStars()
         -- File exists; read its contents into a string
         starsAsString = file:read( "*a" )
         print( "Contents of " .. path .. "\n" .. starsAsString )
-    
-        stars = tonumber(starsAsString)
-    
-    
+        if (stars == nil) then
+        stars = 0
         print ("***New stars = " .. stars)
+    	elseif (starsAsString ~= nil) then
+    		stars = tonumber(starsAsString)
     
+    
+        	print ("***New stars = " .. stars)
+    	end
          
     else
     	print ("***File does not exist")
@@ -238,7 +241,7 @@ end
 checkifpaid()
 
 --composer.gotoScene( "level3_screen" )
-composer.gotoScene( "level4_screen" )
+--composer.gotoScene( "level4_screen" )
 --composer.gotoScene( "level1_screen" )
 --composer.gotoScene( "splashscreen" )
 --composer.gotoScene( "level3_screen" )
@@ -247,7 +250,7 @@ composer.gotoScene( "level4_screen" )
 --composer.gotoScene( "YouLose" )
 --composer.gotoScene( "YouWin2" )
 --composer.gotoScene( "PauseScreen" )
---composer.gotoScene( "main_menu" )
+composer.gotoScene( "main_menu" )
 --composer.gotoScene( "main_menu2" )
 --composer.gotoScene( "instructions" )
 --composer.gotoScene( "credits_screen" )
