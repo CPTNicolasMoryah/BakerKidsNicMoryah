@@ -30,13 +30,20 @@ function UpdateStars()
     	print ("***File exists")
         -- File exists; read its contents into a string
         starsAsString = file:read( "*a" )
-        print( "Contents of " .. path .. "\n" .. starsAsString )
-        if starsAsString then
-        	starsAsString = ""..starconstnt
-        	stars = tonumber(starsAsString)
+
+        print( "***Contents of " .. path .. "\n ***starsAsString = " .. starsAsString )
+
+        if (starsAsString == nil) or (starsAsString == "") then
+        	print ("***starsAsString = nil OR is an empty string")
+        	stars = 0
+        	file:write(stars.."")
         	print ("***New star created = " .. stars)
+        else
+        	print  ("***starsAsString = SOMETHING")
+        	stars = tonumber(starsAsString)
     	end
-    		stars = tonumber(starsAsString)
+   
+    		
     
     
          
