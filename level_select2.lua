@@ -191,7 +191,7 @@ function scene:create( event )
 
             -- Setting Dimensions
             width = 500,
-            height = 180,`
+            height = 180,
 
             -- Insert the images here
             defaultFile = "Images/4Unpressed.png", 256, 120,
