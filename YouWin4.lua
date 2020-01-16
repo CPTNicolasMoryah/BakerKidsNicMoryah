@@ -168,6 +168,7 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     if ( phase == "will" ) then
+        native.setKeyboardFocus( nil )
         -- Called when the scene is still off screen (but is about to come on screen).
         giveStars()
     -----------------------------------------------------------------------------------------

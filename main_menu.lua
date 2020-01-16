@@ -43,7 +43,7 @@ local characterscreenButton
 local muteButton
 local unmuteButton
 -----------------------------------------------------------------------------------------
-local bkgMusic = audio.loadSound("Sounds/bkgmusic.mp3")
+local bkgMusic = audio.loadSound("Sounds/mainmenusound.mp3")
 local bkgMusicChannel
 
 -----------------------------------------------------------------------------------------
