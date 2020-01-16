@@ -187,7 +187,7 @@ function scene:create( event )
         {   
             -- Set its position on the screen relative to the screen size
             x = 512,
-            y = 552.666
+            y = 552.666,
 
             -- Setting Dimensions
             width = 500,
