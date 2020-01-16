@@ -186,15 +186,15 @@ function scene:create( event )
     level4Button = widget.newButton( 
         {   
             -- Set its position on the screen relative to the screen size
-            x = 682.66,
-            y = 512,
+            x = 512,
+            y = 552.666
 
             -- Setting Dimensions
-            width = 150,
-            height = 70,
+            width = 500,
+            height = 180,`
 
             -- Insert the images here
-            defaultFile = "Images/4Unpressed.png", 170, 120,
+            defaultFile = "Images/4Unpressed.png", 256, 120,
             overFile = "Images/4Pressed.png", 170, 120,
 
             -- When the button is released, call the Level1 screen transition function
