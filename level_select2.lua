@@ -147,12 +147,12 @@ function scene:create( event )
     level3Button = widget.newButton( 
         {   
             -- Set its position on the screen relative to the screen size
-            x = 341.33,
-            y = 512,
+            x = 512,
+            y = 280.666,
 
             -- Setting Dimensions
-            width = 150,
-            height = 70,
+            width = 500,
+            height = 180,
 
             -- Insert the images here
             defaultFile = "Images/3Unpressed.png", 256, 120,
@@ -164,19 +164,37 @@ function scene:create( event )
 
     -----------------------------------------------------------------------------------------
 
+   -- -- Creating level1 Button
+   -- level4Button = widget.newButton( 
+   --     {   
+   --         -- Set its position on the screen relative to the screen size
+   --         x = 512,
+   --         y = 552.666,
+--
+   --         -- Setting Dimensions
+   --         width = 500,
+   --         height = 180,
+--
+   --         -- Insert the images here
+   --         defaultFile = "Images/4Unpressed.png", 170, 120,
+   --         overFile = "Images/4Pressed.png", 170, 120,
+--
+   --         -- When the button is released, call the Level1 screen transition function
+   --         onRelease = Level4ScreenTransition          
+   --     } )
     -- Creating level1 Button
     level4Button = widget.newButton( 
         {   
             -- Set its position on the screen relative to the screen size
-            x = 682.66,
-            y = 512,
+            x = 512,
+            y = 552.666
 
             -- Setting Dimensions
-            width = 150,
-            height = 70,
+            width = 500,
+            height = 180,`
 
             -- Insert the images here
-            defaultFile = "Images/4Unpressed.png", 170, 120,
+            defaultFile = "Images/4Unpressed.png", 256, 120,
             overFile = "Images/4Pressed.png", 170, 120,
 
             -- When the button is released, call the Level1 screen transition function
@@ -267,6 +285,7 @@ function scene:hide( event )
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
         audio.stop(bkgMusicChannel)
+        UpdateStars()
 
     -----------------------------------------------------------------------------------------
 

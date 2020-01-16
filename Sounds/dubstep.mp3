@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html dir="ltr" lang="en"> <!--<![endif]-->
+
+<head>
+    <base href="https://www.bensound.com/" />
+	<base href="http://www.bensound.com/" />
+	<meta charset="utf-8">
+	<title>Dubstep | Modern Royalty Free Music</title>	<meta name="description" content="Modern and energetic royalty free Dubstep music. This Dubstep track featuring &quot;wobble&quot; and agressive synth sounds will give energy to your project." />
+			<meta name="keywords" content="royalty free music, royalty, free, music, dubstep, electronica, cars, sport, energy,energetic, wobble, powerful, hi, tech, extreme, agressive, action, modern, speed, trailer, game, video" />
+		<meta name="viewport" content="width=1020px"/>
+		<link href="/image/data/icob2.png" rel="icon" />
+		<link rel="stylesheet" href="mep/bensound/mep/build/mediaelementplayer_cus.min.css" />
+	
+
+		
+	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
+		
+	<link rel="stylesheet" href="css/bendesign.css?70" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="mep/bensound/mep/build/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	
+	<script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
+
+	
+	
+	
+	<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js"></script>
+
+	
+	
+	
+	<script type="text/javascript" src="leverod/view/javascript/leverod.js"></script>
+
+	
+	
+	
+	<script type="text/javascript" src="https://www.bensound.com/catalog/view/adsmart_search/js/adsmartsearch_js.php?description_relevance=&sort_order=relevance-DESC&dropdown_enabled=0&dropdown_text_color=454545&dropdown_update_on_entire_word=0&dropdown_display_img=1&dropdown_display_price=1&dropdown_show_all=Show+all+results&dropdown_no_results=No+results&dropdown_width=340&tpl=bendesign&is_admin=0&website_url=https%3A%2F%2Fwww.bensound.com%2F&version=1.5.5.1&debug=0&debug_show_sql=0&speed_test=0"></script>
+
+	
+		<script type="text/javascript">
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35907795-1']);
+  _gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+
+				
+									
+					
+<div id="superglobal">	<!--start header-->
+	<header>
+		
+		<div id="boite-header">
+				<div id="pocart">
+		<div id="cart">
+	<a class="cart_dropdown" href="index.php?route=checkout/cart"><img src="image/cart_icon_w.png" alt=""><span id="cart-total">0 item(s) - 0,00€</span></a>
+</div>
+		</div>
+			
+						<script> 
+							$('#cart').hide();
+						</script>
+							
+						<script> 							
+						(function() {
+				    var origaddToCart = addToCart ;
+					    addToCart = function() 
+					    {
+					        var result = origaddToCart.apply(this, arguments);
+					        $('#cart').show();
+					        return result;
+					    };
+						})();
+						
+						$('#cart').live('mouseleave', function() {
+						//alert('cart mouseleave');
+						if($('#cart .content .empty').length)
+							{
+								$('#cart').hide();
+							}
+						}); 
+						</script>
+					
+		
+		<div id="logbox">
+			<ul>
+				<li><a href="https://www.bensound.com/index.php?route=account/account">Create An Account | Sign In</a></li>
+			</ul>
+		</div>
+					<div id="logo-texte"><a href="/"><img title="Bensound" alt="Bensound" src="image/logo-hd2.png" /></a>
+			</div>
+			<div id="nav">
+				<ul>
+					<li class="focus-couleur"><a href="royalty-free-music">ROYALTY FREE MUSIC</a></li>
+					<li ><a href="/licensing">LICENSing</a></li>
+					<li ><a href="/music-subscription-youtube-videos">Subscription</a></li>
+					<li ><a href="/help">Faq / Help</a></li>
+					<li ><a href="/contact-me">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>			
+		
+				
+				
+	</header>
+        
+	<div id="bloc_body">
+		<div id="contenu">
+			<div class="container">
+			<div class="sixteen columns">
+				<div id="notification"></div>
+			</div>
+		</div><!--end container--><div class="container">
+	<div class="sixteen columns">
+		<div id="pageName">
+		</div>
+	</div>
+</div>
+
+<!-- strat the main content area -->
+<div class="container">
+	
+    
+
+<div id="menu">	
+		        
+                  
+                
+          		            <ul>
+			
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music">All</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/acoustic-folk">Acoustic / Folk</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/cinematic">Cinematic</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/corporate-pop">Corporate / Pop</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/electronica">Electronica</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/funky-groove">Urban / Groove</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/jazz">Jazz</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/rock">Rock</a>
+                          </li>
+                        <li>
+                            <a 			  			  href="https://www.bensound.com/royalty-free-music/world-others">World / Others</a>
+                          </li>
+                      </ul>
+                  
+        </div>	
+  
+	<div id="pr_style_two" class="sixteen columns">
+				<div class="focus_music">	
+					
+			<div id="titre_focus">
+				<h2><a href="/royalty-free-music/track/dubstep">Dubstep<span> | Royalty Free Music</span></a></h2>
+			</div>
+			<div id="img_focus">
+				<img src="bensound-img/dubstep.jpg" title="Dubstep" alt="Dubstep" />
+			</div>
+			<div id="info_focus">
+						<div class="product_info_acc">
+				
+				
+					<div class="product_info">
+						<div class="acc">
+							<p><b>Description:</b></p><p class="composer"><b>
+							Composer:</b> 
+							Benjamin Tissot (also known as Bensound)							
+
+							<p><p>Modern and energetic royalty free Dubstep music. This Dubstep track featuring "wobble" and agressive synth sounds will give energy to your project.<br />
+Image copyrights: Roman Striga - Shutterstock</p>
+							
+							
+						</div>
+						
+					</div><!--end product_info-->
+				
+			</div><!--end product_info_acc-->
+			
+						
+						
+		<div id="player_focus">
+					<div class="player">
+						<audio id="playerdubstep" preload="none" src="/bensound-music/bensound-dubstep.mp3" type="audio/mp3" controls="controls"></audio>
+					</div>
+										
+							</div>	
+		
+		
+										<p class="taglist">																		
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=dubstep">dubstep</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=electronica">electronica</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=cars">cars</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=sport">sport</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=energy">energy</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=energetic">energetic</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=wobble">wobble</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=powerful">powerful</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=hi">hi</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=tech">tech</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=extreme">extreme</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=agressive">agressive</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=action">action</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=modern">modern</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=speed">speed</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=trailer">trailer</a></span>
+																																				
+									<span class="tag">
+									
+									<a href="http://www.bensound.com/index.php?route=product/search&amp;search=game">game</a></span>
+																																				<span class="tag"><a href="http://www.bensound.com/index.php?route=product/search&amp;search=video">video</a></span></p>
+																										
+							                
+                                
+                
+                
+                
+		</div>
+		<div id="license_focus">
+			
+			
+						<div id="freelicense">
+			<h3>FREE Creative Commons License</h3><p>You are free to use this music in your multimedia project (online videos(YouTube,...), websites, animations, etc.) <b>as long as you credit Bensound.com</b>, For example: "Music: <a href="https://www.bensound.com/"><b>www.bensound.com</b></a>" or "<a href="https://www.bensound.com/"><b>Royalty Free Music from Bensound</b></a>"
+			</p>
+
+			<div style="display: inline-block;"><p><span class="nothis">No Audiobook<br></span><span class="nothis">No Audio Podcast</span></p></div>
+			<div style="display: inline-block;"><p><span class="nothis">No Song Making<br></span><span class="nothis">No Music Remix</span></p></div>
+
+
+
+						<a  href="bensound-music/bensound-dubstep.mp3" class="bouton_pop">Download</a>
+						</div>
+						<div id="prolicense">
+			<h3>PRO License <a href="licensing">(?)</a></h3>
+			
+			<ul>
+				<li>Mp3 + Wav</li>
+				<li>Credits Not Required</li>
+				<li>License Certificate</li>
+			</ul>
+			 
+				
+			<div class="product_desc">
+				<div class="pro_desc_conent">
+					<div class="options inputs clearfix">
+																											<div id="option-472" class="option">
+														<!--  <input type="radio" name="option[472]" value="777" id="option-value-777" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(777,472)" class="five_voir" id="option-value-777"> 
+								
+				&nbsp;€ 34
+
+				  - Add *&nbsp;</a>
+				  				 <span class="convus">
+				 	($38 USD)
+				 </span>
+
+				</p>
+
+							  <p class="lic_des"><b>Standard License: </b>Online Videos (youtube,...), animation, slideshow, presentation, music on hold.</p>
+							  
+							  
+							  </div>
+							  
+							  							<!--  <input type="radio" name="option[472]" value="776" id="option-value-776" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(776,472)" class="five_voir" id="option-value-776"> 
+								
+				&nbsp;€ 65
+
+				  - Add *&nbsp;</a>
+				  				 <span class="convus">
+				 	($73 USD)
+				 </span>
+
+				</p>
+
+							  <p class="lic_des"><b>Extended License: </b>Std License + Cinema, TV/Radio, software, game, application, cd, dvd, Public show.</p>
+							  
+							  
+							  </div>
+							  
+							  							<!--  <input type="radio" name="option[472]" value="775" id="option-value-775" />-->
+							  <div class="bloc_lic">
+							  							
+                <p class="pd_add"><a href="javascript:void(0)" onclick="add2Cart(775,472)" class="five_voir" id="option-value-775"> 
+								
+				€ 580
+
+				  - Add *</a>
+				  				 <span class="convus">
+				 	($647 USD)
+				 </span>
+
+				</p>
+
+							  <p class="lic_des"><b>National TV/Radio Advertising: </b>Extended License + National TV/Radio Advertising for 1 year.</p>
+							  
+							  
+							  </div>
+							  
+							  							</div>
+							<br />
+														
+							
+													  						<input type="hidden" name="product_id" size="2" value="189" />
+						
+						 
+
+					</div><!--end inputs-->
+				</div>
+
+			</div><!--end product_desc-->
+			</div>
+						<div id="subscription">
+							<h3>PRO License Subscription (All Bensound's tracks)</h3>
+				<p class="lic_des"><b>All The Tracks for download and use</b><br />All the downloads in Standard License with mp3 + wav, Licence Certificate and optional credits.</p>
+				<div class="option">
+				<p class="pd_add"><a href="music-subscription-youtube-videos" class="five_voir" class="five_voir">€ 139 - Buy *</a></p>
+				</div>
+				
+			</div>
+			<span class="infotax">*Taxes can be added for European customers</p>
+		</div>
+		
+		
+		</div>
+	</div><!--end sixteen-->
+		
+	
+</div><!--end container-->
+<!-- end the main content area -->
+
+<script>
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+		$('audio').mediaelementplayer({
+			audioWidth: 80,
+			audioHeight: 25,
+			features: ['playpause','progress','current','tracks'],
+			videoVolume: 'horizontal'
+		});
+	});
+/* ]]> */
+</script>
+<script type="text/javascript"><!--
+ function add2Cart(id,pid){
+  
+
+  $.ajax({
+    url: 'index.php?route=checkout/cart/add',
+		type: 'post',
+
+    data:$('.pro_desc_conent input[type=\'text\'], .pro_desc_conent input[type=\'hidden\'], .pro_desc_conent input[type=\'radio\']:checked, .pro_desc_conent input[type=\'checkbox\']:checked, .pro_desc_conent select, .pro_desc_conent textarea').serialize()+'&option['+pid+']='+id,
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			} 
+			
+			if (json['success']) {
+				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="image/close.png" alt="" class="close" /></div>');
+					
+				$('.success').fadeIn('slow');
+				$('#cart').fadeIn();	
+				$('#cart-total').html(json['total']);
+				
+				$('html, body').animate({ scrollTop: 0 }, 'slow'); 
+			}	
+		}
+	});
+  }
+
+//--></script>
+ 
+</div>
+</div>
+<!-- start footer -->
+	<footer>
+		<div class="container">
+		
+			<div id="footer">
+				
+				<div>
+					<p style="margin-top: -10px;">
+					<a href="licensing">LICENSE</a><a href="music-subscription-youtube-videos">SUBSCRIPTION</a><a href="legal">LEGAL NOTICE</a><a href="privacy-policy">PRIVACY POLICY</a><a href="about">ABOUT</a><a href="contact-me">CONTACT</a><a href="help">FAQ</a>
+
+					<a class="social-link" title="Twitter" target="_blank" href="https://twitter.com/bensound"><svg class="social-icon" width="25" fill="#fff" height="19.969" viewBox="0 0 24 19.969"><path d="M24 2.377a9.668 9.668 0 0 1-2.828.793A5.029 5.029 0 0 0 23.337.383a9.727 9.727 0 0 1-3.127 1.222 4.864 4.864 0 0 0-3.594-1.59 5.015 5.015 0 0 0-4.8 6.184A13.877 13.877 0 0 1 1.668.936a5.115 5.115 0 0 0 1.523 6.726 4.83 4.83 0 0 1-2.229-.63 5.018 5.018 0 0 0 3.949 5 4.824 4.824 0 0 1-2.224.085 4.942 4.942 0 0 0 4.6 3.5 9.739 9.739 0 0 1-7.29 2.087 13.706 13.706 0 0 0 7.548 2.263c9.142 0 14.307-7.9 14-14.983A10.153 10.153 0 0 0 24 2.377z"></path></svg></a>
+
+					<a class="social-link"  title="Facebook" target="_blank" href="https://www.facebook.com/bensoundmusic"><svg id="social-f" class="social-icon" fill="#fff" width="25" height="21" viewBox="0 0 10.031 21"><path d="M10.016.033H6.9s-4.88-.5-4.88 4.5V6.6H.03L0 10.536h2.017v10.472h4.627V10.536h2.672l.65-3.935H6.644V5a1.142 1.142 0 0 1 1.36-1.352h1.982z"></path></svg></a>
+
+					<a class="social-link" title="YouTube" target="_blank" href="https://www.youtube.com/c/bensoundmusic"><svg id="youtube" class="social-icon" fill="#fff"      viewBox="10 0 40 45" style="
+    background: #ff0000;
+    height: 23px;
+    width: 26px;
+    padding: 4px;
+">
+<path xmlns="http://www.w3.org/2000/svg" style="/* position: relative; *//* fill:#FFFFFF; *//* top: 20px; *//* left: -76px; *//* height: 120px; */" d="M21,32.53V11.47c0-1.091,1.187-1.769,2.127-1.214l17.82,10.53c0.923,0.546,0.923,1.882,0,2.427   l-17.82,10.53C22.187,34.299,21,33.621,21,32.53z"></path></svg></a>
+					</p>
+					
+				</div>
+				<div>
+					<p><a href="royalty-free-music">Bensound's Royalty Free Music</a> Copyright © 2012-2020					</p>
+				</div>
+				<div>
+					<img class="logo-p" src="image/paypal-logo2.png" />
+				</div>
+			</div>
+		
+				
+		</div><!--end container-->
+	</footer>
+		
+		</div>	
+</body>
+</html>

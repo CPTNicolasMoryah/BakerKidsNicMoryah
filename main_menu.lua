@@ -43,41 +43,37 @@ local characterscreenButton
 local muteButton
 local unmuteButton
 -----------------------------------------------------------------------------------------
-local bkgMusic = audio.loadSound("Sounds/bkgmusic.mp3")
+local bkgMusic = audio.loadSound("Sounds/mainmenusound.mp3")
 local bkgMusicChannel
-
------------------------------------------------------------------------------------------
--- GLOBAL VARIABLES
------------------------------------------------------------------------------------------
-SOUNDON = true
-
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
 local function Mute(touch)
+    print("*****muted")
     if (touch.phase == "ended") then
         -- pause the Sound
         audio.pause(bkgMusicChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = true
         -- hide the mute button
-        muteButton.isVisible = false
+        muteButton.isVisible = true
         -- make the unmute button visible
-        unmuteButton.isVisible = true
+        unmuteButton.isVisible = false
     end
 end
 
 local function Unmute(touch)
+    print("***unmute")
     if (touch.phase == "ended") then
         -- pause the Sound
         audio.resume(bkgMusicChannel)
         -- set the boolean variable to be false (sound is now muted)
         SOUNDON = false
         -- hide the mute button
-        muteButton.isVisible = true
+        muteButton.isVisible = false
         -- make the unmute button visible
-        unmuteButton.isVisible = false
+        unmuteButton.isVisible = true
     end
 end
 
@@ -229,7 +225,7 @@ function scene:create( event )
     unmuteButton = display.newImageRect("Images/unmuteButton.png", 90, 90)
     unmuteButton.x = 900
     unmuteButton.y = 148
-    unmuteButton.isVisible =false
+    unmuteButton.isVisible = false
     -----------------------------------------------------------------------------------------
     muteButton = display.newImageRect("Images/muteButton.png", 90, 90)
     muteButton.x = 900
@@ -242,8 +238,8 @@ function scene:create( event )
     sceneGroup:insert( playButton )
     sceneGroup:insert( creditsButton )
     sceneGroup:insert( instructionsButton )
-    sceneGroup:insert( unmuteButton )
     sceneGroup:insert( muteButton )
+    sceneGroup:insert( unmuteButton )
     sceneGroup:insert( characterscreenButton )
     sceneGroup:insert( starstext )
     sceneGroup:insert( star1 )
@@ -276,20 +272,19 @@ function scene:show( event )
     elseif ( phase == "did" ) then
 
         -- Insert code here to make the scene come alive.
-        -- Example: start timers, begin animation, play audio, etc.
-        bkgMusicChannel = audio.play(bkgMusic, {loops= -1})   
-        muteButton:addEventListener("touch", Mute)
-        unmuteButton:addEventListener("touch", Unmute)
+        -- Example: start timers, begin animation, play audio, etc.   
+        unmuteButton:addEventListener("touch", Mute)
+        muteButton:addEventListener("touch", Unmute)
+
         if ( SOUNDON == true ) then
-            audio.resume(bkgMusicChannel)
+            bkgMusicChannel = audio.play(bkgMusic, {loops= -1})
+            audio.resume(bkgMusic)
             unmuteButton.isVisible = true
             muteButton.isVisible = false
-
         else
-            audio.pause(bkgMusicChannel)
+            audio.pause(bkgMusic)
             unmuteButton.isVisible = false
             muteButton.isVisible = true
-
         end
         
     end
@@ -315,6 +310,7 @@ function scene:hide( event )
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
         audio.stop(bkgMusicChannel)
+        UpdateStars()
 
     -----------------------------------------------------------------------------------------
 

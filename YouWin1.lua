@@ -59,13 +59,25 @@ local function giveStars( )
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 3
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
     elseif (lives == 2) then
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 2
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
     else
         star1.isVisible = true
         stars = stars + 1
+        file, reason = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
     end
 end
 
@@ -181,6 +193,7 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     if ( phase == "will" ) then
+        native.setKeyboardFocus( nil )
         -- Called when the scene is still off screen (but is about to come on screen).
     -----------------------------------------------------------------------------------------
 
@@ -219,6 +232,7 @@ function scene:hide( event )
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
         audio.stop(wonSoundChannel)
+        UpdateStars()
     end
 
 end

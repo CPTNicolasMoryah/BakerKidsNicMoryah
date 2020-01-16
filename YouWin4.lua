@@ -52,13 +52,25 @@ local function giveStars( )
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 3
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
     elseif (lives == 2) then
         star2.isVisible = true
         star1.isVisible = true
         stars = stars + 2
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."")
+        print ("***New stars = " .. stars)
+        io.close( file )
     else
         star1.isVisible = true
         stars = stars + 1
+        file, errorString = io.open( path, "w" )
+        file:write( stars.."" )
+        print ("***New stars = " .. stars)
+        io.close( file )
     end
 end
 -----------------------------------------------------------------------------------------
@@ -139,7 +151,6 @@ function scene:create( event )
         } )
     sceneGroup:insert( level2button )
     sceneGroup:insert( mainmenu ) 
-    sceneGroup:insert( nextlevel )
 end
 
 -----------------------------------------------------------------------------------------
@@ -157,6 +168,7 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     if ( phase == "will" ) then
+        native.setKeyboardFocus( nil )
         -- Called when the scene is still off screen (but is about to come on screen).
         giveStars()
     -----------------------------------------------------------------------------------------
@@ -188,7 +200,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-
+        UpdateStars()
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
