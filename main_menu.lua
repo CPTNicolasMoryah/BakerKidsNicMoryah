@@ -43,7 +43,7 @@ local characterscreenButton
 local muteButton
 local unmuteButton
 -----------------------------------------------------------------------------------------
-local bkgMusic = audio.loadSound("Sounds/mainmenusound.mp3")
+local bkgMusic = audio.loadSound("Sounds/mainmenusound.mp3",{channel = 2} )
 local bkgMusicChannel
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -277,7 +277,7 @@ function scene:show( event )
         muteButton:addEventListener("touch", Unmute)
 
         if ( SOUNDON == true ) then
-            bkgMusicChannel = audio.play(bkgMusic, {loops= -1})
+            bkgMusicChannel = audio.play(bkgMusic, {loops= -1,channel = 2})
             audio.resume(bkgMusic)
             unmuteButton.isVisible = true
             muteButton.isVisible = false

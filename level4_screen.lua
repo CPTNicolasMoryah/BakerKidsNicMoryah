@@ -1221,7 +1221,7 @@ local function FlourQ( event )
     userAnswerFlour = tostring(event.target.text)
     if(event.phase=="submitted")then
         print(""..ANSWERFLOUR1)
-        if (userAnswerFlour1 == ANSWERFLOUR) or (userAnswerFlour1 == CAPITOLANSWERFLOUR) and (userAnswerFlour == ANSWERFLOUR1)  or (userAnswerFlour == CAPITOLANSWERFLOUR1) then
+        if (userAnswerFlour1 == ANSWERFLOUR) or (userAnswerFlour1 == CAPITOLANSWERFLOUR) and (userAnswerFlour == ANSWERFLOUR1)  or (userAnswerFlour == CAPITOLANSWERFLOUR1) and (userAnswerFlour1 ~= nil) then
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
             FlourTextField1:removeEventListener("userInput", FlourQ1)
@@ -1260,7 +1260,7 @@ end
 local function FlourQ1( event )
     userAnswerFlour1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerFlour == ANSWERFLOUR) or (userAnswerFlour == CAPITOLANSWERFLOUR) and (userAnswerFlour1 == ANSWERFLOUR1)  or (userAnswerFlour1 == CAPITOLANSWERFLOUR1) then
+        if (userAnswerFlour == ANSWERFLOUR) or (userAnswerFlour == CAPITOLANSWERFLOUR) and (userAnswerFlour1 == ANSWERFLOUR1)  or (userAnswerFlour1 == CAPITOLANSWERFLOUR1) and (userAnswerFlour ~= nil) then
             native.setKeyboardFocus( nil )
             FlourTextField:removeEventListener("userInput", FlourQ)
             FlourTextField1:removeEventListener("userInput", FlourQ1)
@@ -1310,7 +1310,7 @@ end
 local function VanillaQ1( event )
     userAnswerVanilla1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerVanilla == ANSWERVanilla)then
+        if (userAnswerVanilla == ANSWERVanilla) or (userAnswerVanilla == CAPITOLANSWERVANILLA1) and (uswerAnswerVanilla1 == ANSWERVanilla) or (uswerAnswerVanilla1 == CAPITOLANSWERVANILLA) then
             native.setKeyboardFocus( nil )
             VanillaTextField1:removeEventListener("userInput", VanillaQ)
             VanillaTextField2:removeEventListener("userInput", VanillaQ1)
@@ -1441,7 +1441,7 @@ end
 local function SugarQ1( event )
     userAnswerSugar1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) then
+        if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) and (userAnswerSugar ~= nil) then
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
             SugarTextField1:removeEventListener("userInput", SugarQ1)
@@ -1476,7 +1476,7 @@ end
 local function SugarQ( event )
     userAnswerSugar = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) then
+        if (userAnswerSugar == ANSWERSUGAR) or (userAnswerSugar == CAPITOLANSWERSUGAR) and (userAnswerSugar1 == ANSWERSUGAR1) or (userAnswerSugar1 == CAPITOLANSWERSUGAR1) and (userAnswerSugar1 ~= nil) then
             native.setKeyboardFocus( nil )
             SugarTextField:removeEventListener("userInput", SugarQ)
             SugarTextField1:removeEventListener("userInput", SugarQ1)

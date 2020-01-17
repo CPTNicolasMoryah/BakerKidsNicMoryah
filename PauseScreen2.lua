@@ -43,6 +43,7 @@ local function Backtolevel2(  )
 end
 
 local function restartLevel2(  )
+    audio.stop()
     composer.removeScene("level2_screen")
     composer.gotoScene("level2_screen")
 end
@@ -68,7 +69,7 @@ local function playMusic( touch )
 end
 
 local function mainmenuTransition()
-    audio.stop(level2SoundChannel)
+    audio.stop()
     composer.removeScene("level2_screen")
     composer.gotoScene( "main_menu" )
 end

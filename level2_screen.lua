@@ -132,7 +132,7 @@ local cashoverlay
 -- SOUNDS
 -----------------------------------------------------------------------------------------
 local level2Sound = audio.loadSound("Sounds/level2screenmusic.mp3")
-local level2SoundChannel = audio.play(level2Sound,{loops = -1})
+local level2SoundChannel = audio.play(level2Sound,{loops = -1, channel = 1})
 
 local correctSound = audio.loadSound("Sounds/correctsound.wav")
 local correctSoundChannel
@@ -706,7 +706,7 @@ end
 local function BakingPowder1Q( event )
     userAnswerBakingPowder1 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1)  or (userAnswerBakingPowder1 == CAPITALANSWERBAKINGPOWDER1)then
+        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1)  or (userAnswerBakingPowder1 == CAPITALANSWERBAKINGPOWDER1) and (userAnswerBakingPowder2 ~= nil) then
             BakingPowder1TextField:removeEventListener("userInput", BakingPowder1Q)
             BakingPowder2TextField:removeEventListener("userInput", BakingPowder2Q)
             native.setKeyboardFocus( nil )
@@ -743,7 +743,7 @@ end
 local function BakingPowder2Q( event )
         userAnswerBakingPowder2 = tostring(event.target.text)
     if(event.phase=="submitted")then
-        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1) or (userAnswerBakingPowder1 == CAPITALANSWERBAKINGPOWDER1)then
+        if (userAnswerBakingPowder2 == ANSWERBAKINGPOWDER2) or (userAnswerBakingPowder2 == CAPITOLANSWERBAKINGPOWDER2) and (userAnswerBakingPowder1 == ANSWERBAKINGPOWDER1) or (userAnswerBakingPowder1 == CAPITALANSWERBAKINGPOWDER1) and (userAnswerBakingPowder1 ~= nil) then
             native.setKeyboardFocus( nil )
             BakingPowder1TextField:removeEventListener("userInput", BakingPowder1Q)
             BakingPowder2TextField:removeEventListener("userInput", BakingPowder2Q)
@@ -791,8 +791,7 @@ local function BakingSoda1Q( event )
 
     userAnswerBakingSoda1 = tostring(event.target.text)     
     if(event.phase=="submitted")then
-        userAnswerBakingSoda2 = tostring(event.target.text)
-        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1) and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
+        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1) and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2) and (userAnswerBakingSoda2 ~= nil) then
             native.setKeyboardFocus( nil )
             BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
             BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
@@ -830,15 +829,9 @@ local function BakingSoda1Q( event )
 end
 
 local function BakingSoda2Q( event )
-    -- ask the question
-    if (event.phase=="began")then
-
-        --clear text field 
-       BakingSoda2TextField.text=""
-       
-    elseif(event.phase=="submitted")then
+if(event.phase=="submitted")then
         userAnswerBakingSoda2 = tostring(event.target.text)
-        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2)then
+        if (userAnswerBakingSoda1 == ANSWERBAKINGSODA1) or (userAnswerBakingSoda1 == CAPITOLANSWERBAKINGSODA1)and (userAnswerBakingSoda2 == ANSWERBAKINGSODA2) or (userAnswerBakingSoda2 == CAPITOLANSWERBAKINGSODA2) and (userAnswerBakingSoda1 ~= nil) then
             native.setKeyboardFocus( nil )
             BakingSoda1TextField:removeEventListener("userInput", BakingSoda1Q)
             BakingSoda2TextField:removeEventListener("userInput", BakingSoda2Q)
@@ -1218,7 +1211,7 @@ local function AddEventListeners()
     SugarTextField:addEventListener("userInput", SugarQ)
 end
    
-local function create(  )
+ local function create(  )
         -- Insert the background image
     bkg = display.newImageRect("Images/level2screen.png", display.contentWidth, display.contentHeight)
     bkg.x = display.contentCenterX
@@ -1433,8 +1426,6 @@ local function create(  )
     cashoverlay.y = 840
     cashoverlay.height = 325
     cashoverlay.width = 320
-    
-
 end
 
 -----------------------------------------------------------------------------------------
